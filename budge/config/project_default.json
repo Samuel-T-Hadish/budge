@@ -1,3 +1,4 @@
+
 {
   "meta_input": {
     "file_name": "Project_Data",
@@ -7,10 +8,10 @@
   },
 
   "estimation_input": {
-    "method": "Hand",
-    "plant_type": "any",
+    "method": "material factors",
+    "plant_type": "fluid",
     "equipment": "Pressure Vessels",
     "equipment_type": "Horizontal, cs",
-    "sizing_value": 100
+    "sizing_value": 160
   }
 }

@@ -1,12 +1,9 @@
-import sys
 import os
+import traceback
 import pandas as pd
 import dash
-from dash import Dash, html, Input, Output, State, dcc
+from dash import Dash, html, Input, Output, State
 from dash.exceptions import PreventUpdate
-from dash_ag_grid.AgGrid import AgGrid
-import traceback
-from collections import namedtuple
 import numpy as np
 from agility.components import (
     ButtonCustom,
@@ -16,17 +13,18 @@ from agility.components import (
     DisplayField,
 )
 
-from budge.config.main import STORE_ID, PROJECT_NAME, DATA_STORE
 from budge.project import estimation
+from budge.core.definitions import Factors
+from budge.config.main import STORE_ID, DATA_STORE
 
+from typing import Final
 
 dash.register_page(__name__)
 app: Dash = dash.get_app()
 
-from typing import Final
-
-
 class PageIDs:
+    """Class PageIDs"""
+
     def __init__(self):
         # Get the base name of the file where this instance is created
         filename = os.path.basename(__file__)
@@ -89,6 +87,7 @@ layout = html.Div(
     Input(STORE_ID, "data"),
 )
 def load_status(data):
+    """loading the data"""
     if data is None:
         return MessageCustom(
             messages="Project not loaded. Go to start page and create new or open existing project.",
@@ -104,6 +103,7 @@ def load_status(data):
     State(DATA_STORE, "data"),
 )
 def display_input(data, material_data):
+    """displaying input"""
 
     if data is None:
         raise PreventUpdate
@@ -118,10 +118,10 @@ def display_input(data, material_data):
             DropdownCustom(
                 id=ids.method_dropdown,
                 label="Select Method",
-                value=estimation_input.get("method", "Select a costing method"),
+                value=estimation_input.get("method", ""),
                 options=[
                     {"label": method, "value": method}
-                    for method in df["method"].unique()
+                    for method in df[Factors.METHOD].unique()
                 ],
                 error_message=errors.get("method", ""),
             ).layout,
@@ -169,12 +169,17 @@ def display_input(data, material_data):
 @app.callback(
     Output(ids.plant_dropdown, "options"),
     Input(ids.method_dropdown, "value"),
+    State(STORE_ID,"data"),
     State(DATA_STORE, "data"),
 )
-def update_plant_options(method_choice, material_data):
+def update_plant_options(method_choice, data, material_data):
     if method_choice:
         df = pd.DataFrame(material_data)
-        plant_types = df[df["method"] == method_choice]["plant_type"].dropna().unique()
+        plant_types = (
+            df[df[Factors.METHOD] == method_choice][Factors.PLANT_TYPE]
+            .dropna()
+            .unique()
+        )
         return [{"label": plant, "value": plant} for plant in plant_types]
     return []
 
@@ -188,7 +193,9 @@ def update_equipment_options(plant_choice, material_data):
     if plant_choice:
         df = pd.DataFrame(material_data)
         equipment_types = (
-            df[df["plant_type"] == plant_choice]["equipment"].dropna().unique()
+            df[df[Factors.PLANT_TYPE] == plant_choice][Factors.EQUIPMENT]
+            .dropna()
+            .unique()
         )
         return [
             {"label": equipment, "value": equipment} for equipment in equipment_types
@@ -212,14 +219,10 @@ def update_equipment_type_options(
         specific_types = (
             estimation.filter_material_data(
                 material_data, method_choice, plant_choice, equipment_choice
-            )["equipment_type"]
+            )[Factors.EQUIPMENT_TYPE]
             .dropna()
             .unique()
         )
-
-        # specific_types = df[(df['method'] == method_choice) &
-        #                     (df['plant_type'] == plant_choice) &
-        #                     (df['equipment'] == equipment_choice)]['equipment_type'].dropna().unique()
         return [
             {"label": equipment_type, "value": equipment_type}
             for equipment_type in specific_types
@@ -247,10 +250,10 @@ def update_sizing_label(
         )
         selected_row = selected_row.iloc[0]
 
-        sizing_quantity = selected_row["sizing_quantity"]
-        units = selected_row["units"]
-        s_lower = selected_row["s_lower"]
-        s_upper = selected_row["s_upper"]
+        sizing_quantity = selected_row[Factors.SIZING_QUANTITY]
+        units = selected_row[Factors.UNITS]
+        s_lower = selected_row[Factors.S_LOWER]
+        s_upper = selected_row[Factors.S_UPPER]
 
         if np.isnan(s_lower) or np.isnan(s_upper):
             placeholder = f"Enter {sizing_quantity} in {units}"

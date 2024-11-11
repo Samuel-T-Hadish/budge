@@ -10,7 +10,7 @@ class EstimationInput(BaseModel):
     sizing_value: float
 
     @field_validator('method')
-    def method_must_not_be_empty(cls, v):
+    def method_validate(cls, v):
         if not v:
             raise ValueError('Method must be selected.')
         return v
@@ -22,19 +22,19 @@ class EstimationInput(BaseModel):
         return v
 
     @field_validator('equipment')
-    def equipment_must_not_be_empty(cls, v):
+    def equipment_validate(cls, v):
         if not v:
             raise ValueError('Equipment must be selected.')
         return v
 
     @field_validator('equipment_type')
-    def equipment_type_must_not_be_empty(cls, v):
+    def equipment_type_validate(cls, v):
         if not v:
             raise ValueError('Equipment type must be selected.')
         return v
 
     @field_validator('sizing_value')
-    def Sizing_must_be_positive(cls, v):
+    def sizing_validate(cls, v):
         if v is None or v <= 0:
             raise ValueError('Sizing quantity must be a positive number.')
         return v
