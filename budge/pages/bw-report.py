@@ -25,8 +25,7 @@ from agility.components import (
 
 from budge.config.main import STORE_ID
 from budge.project import Project as PRJ
-from budge.project.report import generate_report
-from budge.schemas.page2 import Page2Input, generate_table_record
+# from budge.project.report import generate_report
 
 from typing import Final
 

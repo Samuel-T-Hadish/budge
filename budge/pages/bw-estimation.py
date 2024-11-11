@@ -361,7 +361,7 @@ def run_calculation(n_clicks, data, material_data):
     if is_ready:
         try:
             data = estimation.run_calculation(data, material_data)
-            data = estimation.run_reset(data)
+            # data = estimation.run_reset(data)
             msg = "Calculation successful"
             feedback_html = MessageCustom(messages=msg, success=True).layout
             return data, feedback_html, None
@@ -386,11 +386,11 @@ def run_calculation(n_clicks, data, material_data):
 def display_output(data):
     if not data:
         return None
-    page3_output = data.get("page3_output", None)
+    estimation_output = data.get("estimation_output", None)
 
-    if page3_output is None:
+    if estimation_output is None:
         return None
-    page3_output = data.get("page3_output", {})
+    estimation_output = data.get("estimation_output", {})
 
     return html.Div(
         [
@@ -401,12 +401,12 @@ def display_output(data):
             DisplayField(
                 id=ids.purchased_equipment_cost_output,
                 label="Purchased Equipment Cost",
-                value=page3_output["purchased_cost_output"],
+                value=estimation_output["purchased_cost_output"],
             ).layout,
             DisplayField(
                 id=ids.total_cost_output,
                 label="Total Fixed Capital Cost",
-                value=page3_output["total_cost_output"],
+                value=estimation_output["total_cost_output"],
             ).layout,
         ]
     )
