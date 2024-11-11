@@ -1,0 +1,97 @@
+@font-face {
+  font-family: 'UniversCondensed';
+  src: url('fonts/Univers-Condensed.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+   
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* Apply the custom font to the body */
+body {
+  @apply font-univers-condensed;
+}
+
+.app-content{
+    @apply flex min-h-screen w-full;
+
+}
+.page-content{
+    @apply w-full bg-slate-50;
+}
+.sidebar-homelink{
+    @apply text-lg font-bold;
+}
+
+.sidebar-content{
+    @apply w-60  border-gray-200 min-h-screen bg-indigo-50;
+}
+
+.sidebar-logo {
+    @apply w-full h-auto pl-2 p-6;
+}
+
+.sidebar-steps{
+  @apply  overflow-y-auto px-2 py-6
+}
+
+.sidebar-home{
+    @apply  bg-bilfinger-primary-blue px-2 py-2 text-center
+}
+
+
+
+.app-title{
+    @apply text-2xl font-semibold py-2 bg-bilfinger-primary-yellow-green text-center text-purple-800;
+}
+.page-title{
+    @apply text-xl font-semibold px-6 pt-6 pb-2 text-purple-500;
+}
+
+
+.dash-h1{
+    @apply text-lg font-semibold my-2 text-bilfinger-font-color;
+}
+
+.dash-h2{
+    @apply text-base font-semibold my-2 text-bilfinger-font-color;
+}
+
+.dash-h3{
+    @apply text-sm font-semibold my-2 text-bilfinger-font-color;
+}
+
+p{
+    @apply text-sm mb-2;
+}
+
+.widget-label{
+    @apply text-sm font-medium text-gray-700;
+}
+
+.widget-help{
+    @apply mt-2 text-sm text-gray-500;
+}
+
+.widget-error{
+    @apply mt-2 text-sm text-red-600;
+}
+
+.widget-checklist{
+    @apply block w-full rounded-md shadow-sm border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 sm:text-sm;
+}
+
+.widget-input-for-addon{
+    @apply block w-full bg-white rounded-l-sm shadow-sm border border-gray-500 px-2 py-1.5 text-gray-900 ring-1 ring-inset ring-gray-400 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6;
+}
+
+.widget-input{
+    @apply block bg-white w-full rounded-sm shadow-sm border border-gray-500 px-2 py-1.5 text-gray-900 ring-1 ring-inset ring-gray-400 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6;
+}
+
+.widget-addon{
+    @apply inline-flex items-center shadow-sm rounded-r-sm border border-l-0 border-2 border-gray-500 px-1 py-1.5 text-gray-900 sm:text-sm;
+}

@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "budge"
+version = "0.1.0"
+description = "A basic Dash application"
+authors = [
+    {name = "Your Name", email = "your_email@example.com"}
+]
+license = {file = "LICENSE"}
+readme = "README.md"
+
+dependencies = [
+        "agility @git+https://github.com/sandeeprah/agility.git@main",
+        "flask",
+        "dash",
+        "dash-ag-grid",
+        "pandas",
+        "pydantic"
+        
+]
