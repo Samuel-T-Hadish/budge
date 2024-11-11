@@ -8,7 +8,7 @@
 
   "estimation_input": {
     "method": "Hand",
-    "plant_type": "fluid",
+    "plant_type": "any",
     "equipment": "Pressure Vessels",
     "equipment_type": "Horizontal, cs",
     "sizing_value": 100

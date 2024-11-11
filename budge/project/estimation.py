@@ -47,12 +47,20 @@ def filter_material_data(data, method=None, plant_type=None, equipment=None, equ
     filtered_data = data
     if method:
         filtered_data = filtered_data[filtered_data['method'] == method]
+        if filtered_data.empty:
+            raise KeyError("Empty Dataframe! Check the input criteria as no matching data was found.")
     if plant_type:
         filtered_data = filtered_data[filtered_data['plant_type'] == plant_type]
+        if filtered_data.empty:
+            raise KeyError("Empty Dataframe! Check the input criteria as no matching data was found.")
     if equipment:
         filtered_data = filtered_data[filtered_data['equipment'] == equipment]
+        if filtered_data.empty:
+            raise KeyError("Empty Dataframe! Check the input criteria as no matching data was found.")
     if equipment_type:
         filtered_data = filtered_data[filtered_data['equipment_type'] == equipment_type]
+        if filtered_data.empty:
+            raise KeyError("Empty Dataframe! Check the input criteria as no matching data was found.")
     
     # Check if filtered data is empty
     if filtered_data.empty:
