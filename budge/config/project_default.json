@@ -1,17 +1,15 @@
-
 {
-  "meta_input": {
-    "file_name": "Project_Data",
-    "client_name": "",
-    "project_name": "",
-    "project_description": ""
-  },
-
-  "estimation_input": {
-    "method": "material factors",
-    "plant_type": "fluid",
-    "equipment": "Pressure Vessels",
-    "equipment_type": "Horizontal, cs",
-    "sizing_value": 160
-  }
+    "meta_input": {
+        "file_name": "Project_Data",
+        "client_name": "",
+        "project_name": "",
+        "project_description": ""
+    },
+    "estimation_input": {
+        "method": "material factors",
+        "plant_type": "fluid",
+        "equipment": "Pressure Vessels",
+        "equipment_type": "Vertical, cs ",
+        "sizing_value": 160
+    }
 }

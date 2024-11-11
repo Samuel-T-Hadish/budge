@@ -165,7 +165,6 @@ def display_input(data):
     prevent_initial_call=True,
 )
 def add_record(n_clicks, data):
-    # print(data)
     if n_clicks is None:
         raise PreventUpdate
 

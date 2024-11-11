@@ -115,7 +115,6 @@ def all_inputs_ready(data):
     estimation_input, estimation_errors = validate_input(estimation_input)
 
     if estimation_errors:
-        print(estimation_errors)
         ready = False
         msgs.append("Estimation Inputs Invalid")
         msgs.extend([f"{field}: {error}" for field, error in estimation_errors.items()])
@@ -135,8 +134,6 @@ def run_calculation(data, material_data):
     s_lower = selected_row[Factors.S_LOWER]
     s_upper = selected_row[Factors.S_UPPER]
 
-    print(s_lower)
-    print(s_upper)
 
     if not (np.isnan(s_lower) or np.isnan(s_upper)) and not (
         s_lower <= estimation_input.sizing_value <= s_upper
@@ -149,7 +146,6 @@ def run_calculation(data, material_data):
     a = selected_row[Factors.A]
     b = selected_row[Factors.B]
     n = selected_row[Factors.N]
-    print(f"a:{a}")
 
     purchased_equipment_cost = a + b * (estimation_input.sizing_value) ** float(n)
     purchased_cost_output = f"${purchased_equipment_cost:,.2f}"

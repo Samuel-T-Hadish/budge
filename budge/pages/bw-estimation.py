@@ -1,26 +1,27 @@
 import os
 import traceback
-import pandas as pd
+from typing import Final
+
 import dash
-from dash import Dash, html, Input, Output, State
-from dash.exceptions import PreventUpdate
 import numpy as np
+import pandas as pd
 from agility.components import (
     ButtonCustom,
+    DisplayField,
     DropdownCustom,
     InputCustom,
     MessageCustom,
-    DisplayField,
 )
+from dash import Dash, Input, Output, State, html
+from dash.exceptions import PreventUpdate
 
-from budge.project import estimation
+from budge.config.main import DATA_STORE, STORE_ID
 from budge.core.definitions import Factors
-from budge.config.main import STORE_ID, DATA_STORE
-
-from typing import Final
+from budge.project import estimation
 
 dash.register_page(__name__)
 app: Dash = dash.get_app()
+
 
 class PageIDs:
     """Class PageIDs"""
@@ -112,6 +113,24 @@ def display_input(data, material_data):
     estimation_input, errors = estimation.validate_input(estimation_input)
     df = pd.DataFrame(material_data)
 
+    method_options = [
+        {"label": method, "value": method} for method in df[Factors.METHOD].unique()
+    ]
+
+    plant_options = [
+        {"label": plant, "value": plant} for plant in df[Factors.PLANT_TYPE].unique()
+    ]
+
+    equipment_options = [
+        {"label": equipment, "value": equipment}
+        for equipment in df[Factors.EQUIPMENT].unique()
+    ]
+
+    equipment_type_options = [
+        {"label": equipment_type, "value": equipment_type}
+        for equipment_type in df[Factors.EQUIPMENT_TYPE].unique()
+    ]
+
     input_fields = html.Div(
         [
             html.H1("Input", className="dash-h1"),
@@ -119,31 +138,28 @@ def display_input(data, material_data):
                 id=ids.method_dropdown,
                 label="Select Method",
                 value=estimation_input.get("method", ""),
-                options=[
-                    {"label": method, "value": method}
-                    for method in df[Factors.METHOD].unique()
-                ],
+                options=method_options,
                 error_message=errors.get("method", ""),
             ).layout,
             DropdownCustom(
                 id=ids.plant_dropdown,
                 label="Select Plant Type",
-                value=estimation_input.get("plant", ""),
-                options=[],
-                error_message=errors.get("plant", ""),
+                value=estimation_input.get("plant_type", ""),
+                options=plant_options,
+                error_message=errors.get("plant_type", ""),
             ).layout,
             DropdownCustom(
                 id=ids.equipment_dropdown,
                 label="Select Equipment",
                 value=estimation_input.get("equipment", ""),
-                options=[],
+                options=equipment_options,
                 error_message=errors.get("equipment", ""),
             ).layout,
             DropdownCustom(
                 id=ids.equipment_type_dropdown,
                 label="Select specific equipment type:",
                 value=estimation_input.get("equipment_type", ""),
-                options=[],
+                options=equipment_type_options,
                 error_message=errors.get("equipment_type", ""),
             ).layout,
             InputCustom(
@@ -152,6 +168,7 @@ def display_input(data, material_data):
                 label="Sizing Quantity",
                 value=estimation_input.get("sizing_value", 0),
                 error_message=errors.get("sizing_value", ""),
+                help_text="Enter sizing value",
             ).layout,
         ]
     )
@@ -169,7 +186,7 @@ def display_input(data, material_data):
 @app.callback(
     Output(ids.plant_dropdown, "options"),
     Input(ids.method_dropdown, "value"),
-    State(STORE_ID,"data"),
+    State(STORE_ID, "data"),
     State(DATA_STORE, "data"),
 )
 def update_plant_options(method_choice, data, material_data):
@@ -209,11 +226,12 @@ def update_equipment_options(plant_choice, material_data):
         Input(ids.method_dropdown, "value"),
         Input(ids.plant_dropdown, "value"),
         Input(ids.equipment_dropdown, "value"),
+        Input(STORE_ID, "data"),
     ],
     State(DATA_STORE, "data"),
 )
 def update_equipment_type_options(
-    method_choice, plant_choice, equipment_choice, material_data
+    method_choice, plant_choice, equipment_choice, _, material_data
 ):
     if method_choice and plant_choice and equipment_choice:
         specific_types = (
@@ -232,7 +250,7 @@ def update_equipment_type_options(
 
 # Update Sizing Label and Input Placeholder based on selected specific equipment type
 @app.callback(
-    Output(ids.sizing_quantity_input, "placeholder"),
+    Output(f"{ids.sizing_quantity_input}-hel", "value"),
     [
         Input(ids.method_dropdown, "value"),
         Input(ids.plant_dropdown, "value"),
@@ -262,7 +280,7 @@ def update_sizing_label(
                 f"Enter {sizing_quantity} in {units} between {s_lower} and {s_upper}"
             )
         return placeholder
-    return "Enter sizing value"
+    return "Enter sizing value11"
 
 
 # Callback to save data
@@ -287,14 +305,12 @@ def save_data(n_clicks, method, plant, equipment, equipment_type, sizing_value, 
         raise PreventUpdate
     estimation_input = {
         "method": method,
-        "plant": plant,
+        "plant_type": plant,
         "equipment": equipment,
         "equipment_type": equipment_type,
         "sizing_value": sizing_value,
     }
     data["estimation_input"] = estimation_input
-
-    print(data)
 
     data = estimation.save_reset(data)
     return (
