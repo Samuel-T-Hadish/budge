@@ -71,12 +71,25 @@ layout = html.Div(
         ),
         html.Hr(),
         html.Div(id=ids.status),
-        html.Div(id=ids.input, className="px-6 pb-2 w-100"),
+        html.Div(id=ids.input, className="px-6 pb-2 w-96"),
         html.Div(id=ids.save_container, className="px-6 pb-2 w-96"),
         html.Div(id=ids.feedback_save, className="px-6 pb-2 w-96"),
         html.Div(id=ids.run_container, className="px-6 pb-2 w-96"),
         html.Div(id=ids.feedback_run, className="px-6 pb-2 w-96"),
-        html.Div(id=ids.output, className="px-6 pb-2 w-60"),
+        # html.Div(id=ids.output, className="px-6 pb-2 w-60"),
+        html.Div(
+            id=ids.output,
+            className="px-6 pb-5 w-96 rounded shadow-lg",
+            style={
+                "backgroundColor": "#f8f9fa",
+                "border": "1px solid #dee2e6",
+                "paddingTop": "10px",  # Additional padding at the top if needed
+                "margin": "10px 0",  # Margin on top and bottom
+                "minHeight": "200px",  # Set a minimum height
+                "boxSizing": "border-box",  # Ensures padding is included in total width/height
+                "textAlign": "left",  # Center-align content within the Div
+            },
+        ),
     ],
     className="w-full",
 )
