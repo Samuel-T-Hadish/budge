@@ -1,6 +1,5 @@
 class Factors:
     """ Main columns"""
-
     METHOD = "Method"
     PLANT_TYPE = "Plant Type"
     EQUIPMENT = "Equipment"
@@ -27,9 +26,7 @@ class Factors:
     CONTINGENCY = "Contingency"
     LOCATION_FACTOR = "Location Factor"
 
-
 class Methods:
-    """ Method types """
-    
+    """ Method types """  
     MATERIAL_FACTORS = "material factors"
     HAND = "Hand"
