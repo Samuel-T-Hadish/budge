@@ -418,7 +418,7 @@ def display_output(data):
             ).layout,
             DisplayField(
                 id=ids.total_cost_output,
-                label="Total Fixed Capital Cost",
+                label="ISBL cost",
                 value=estimation_output["total_cost_output"],
             ).layout,
         ]

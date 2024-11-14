@@ -172,7 +172,7 @@ def run_calculation(data, material_data):
             (1 + float(fp)) * fm + (fer + fel + fi + fc + fs + fl)
         )
         total_fixed_capital_cost = ISBL_cost * (1 + OS) * (1 + DE + X) * location_factor
-        total_cost_output = f"${total_fixed_capital_cost:,.2f}"
+        total_cost_output = f"${ISBL_cost:,.2f}"
 
     estimation_output = {}
     estimation_output["purchased_cost_output"] = f"{purchased_cost_output}"
