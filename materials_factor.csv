@@ -1,172 +1,172 @@
-method,plant_type,equipment,equipment_type,sizing_quantity,units,s_lower,s_upper,a,b,n,installation_factor,material_factor,equipment_erection_factor,piping_factor,instrumentation_and_control_factor,electrical_factor,civil_factor,structures_and_buildings_factor,lagging_and_paint_factor,ISBL_cost_factor,Offsites_factor,design_and_engineering_factor,contingency,location_factor
-material_factors,solid,Agitators and Mixers,Propeller ,driver power,kW,5,75,17000,1130,1.05,,1,0.6,0.2,0.2,0.15,0.2,0.1,0.05,2.5,0.4,0.2,0.1,1.07
-material_factors,solid,Agitators and Mixers,Spiral ribbon mixer,driver power,kW,5,35,30800,125,2,,1,0.6,0.2,0.2,0.15,0.2,0.1,0.05,2.5,0.4,0.2,0.1,1.07
-material_factors,solid,Agitators and Mixers,Static mixer,flowrate,liters/s,1,50,570,1170,0.4,,1,0.6,0.2,0.2,0.15,0.2,0.1,0.05,2.5,0.4,0.2,0.1,1.07
-material_factors,solid,Boilers,"Packaged, 15 to 40 bar",steam mass flowrate,kg/h ,5000,200000,124000,10,1,,1,0.6,0.2,0.2,0.15,0.2,0.1,0.05,2.5,0.4,0.2,0.1,1.07
-material_factors,solid,Boilers,"Field erected, 10 to 70 bar",steam mass flowrate,kg/h ,20000,800000,130000,53,0.9,,1,0.6,0.2,0.2,0.15,0.2,0.1,0.05,2.5,0.4,0.2,0.1,1.07
-material_factors,solid,Centrifuges,High-speed disk,diameter,m,0.26,0.49,57000,480000,0.7,,1,0.6,0.2,0.2,0.15,0.2,0.1,0.05,2.5,0.4,0.2,0.1,1.07
-material_factors,solid,Centrifuges,Atmospheric suspended basket,power,kW,2,20,65000,750,1.5,,1,0.6,0.2,0.2,0.15,0.2,0.1,0.05,2.5,0.4,0.2,0.1,1.07
-material_factors,solid,Compressors,Blower,flowrate,m³/h,200,5000,4450,57,0.8,,1,0.6,0.2,0.2,0.15,0.2,0.1,0.05,2.5,0.4,0.2,0.1,1.07
-material_factors,solid,Compressors,Centrifugal,driver power,kW,75,30000,580000,20000,0.6,,1,0.6,0.2,0.2,0.15,0.2,0.1,0.05,2.5,0.4,0.2,0.1,1.07
-material_factors,solid,Compressors,Reciprocating,driver power,kW,93,16800,260000,2700,0.75,,1,0.6,0.2,0.2,0.15,0.2,0.1,0.05,2.5,0.4,0.2,0.1,1.07
-material_factors,solid,Conveyors,"Belt, 0.5 m wide",length,m,10,500,41000,730,1,,1,0.6,0.2,0.2,0.15,0.2,0.1,0.05,2.5,0.4,0.2,0.1,1.07
-material_factors,solid,Conveyors,"Belt, 1.0 m wide",length,m,10,500,46000,1320,1,,1,0.6,0.2,0.2,0.15,0.2,0.1,0.05,2.5,0.4,0.2,0.1,1.07
-material_factors,solid,Conveyors,"Bucket elevator, 0.5 m bucket",height,m,10,30,17000,2600,1,,1,0.6,0.2,0.2,0.15,0.2,0.1,0.05,2.5,0.4,0.2,0.1,1.07
-material_factors,solid,Crushers,Reversible hammer mill,mass flowrate,t/h,30,400,68400,730,1,,1,0.6,0.2,0.2,0.15,0.2,0.1,0.05,2.5,0.4,0.2,0.1,1.07
-material_factors,solid,Crushers,Pulverizers,mass flowrate,kg/h,200,4000,16000,670,0.5,,1,0.6,0.2,0.2,0.15,0.2,0.1,0.05,2.5,0.4,0.2,0.1,1.07
-material_factors,solid,Crushers,Jaw crusher,mass flowrate,t/h,100,600,-8000,62000,0.5,,1,0.6,0.2,0.2,0.15,0.2,0.1,0.05,2.5,0.4,0.2,0.1,1.07
-material_factors,solid,Crushers,Gyratory crusher,mass flowrate,t/h,200,3000,5000,5100,0.7,,1,0.6,0.2,0.2,0.15,0.2,0.1,0.05,2.5,0.4,0.2,0.1,1.07
-material_factors,solid,Crushers,Ball mill,mass flowrate,t/h,0.7,60,-23000,242000,0.4,,1,0.6,0.2,0.2,0.15,0.2,0.1,0.05,2.5,0.4,0.2,0.1,1.07
-material_factors,solid,Crystallizers,Scraped surface crystallizer,length,m,7,280,10000,13200,0.8,,1,0.6,0.2,0.2,0.15,0.2,0.1,0.05,2.5,0.4,0.2,0.1,1.07
-material_factors,solid,Dryers,Direct contact rotary,area,m²,11,180,15000,10500,0.9,,1,0.6,0.2,0.2,0.15,0.2,0.1,0.05,2.5,0.4,0.2,0.1,1.07
-material_factors,solid,Dryers,Atmospheric tray batch,area,m²,3,20,10000,7900,0.5,,1,0.6,0.2,0.2,0.15,0.2,0.1,0.05,2.5,0.4,0.2,0.1,1.07
-material_factors,solid,Dryers,Spray dryer,evap rate,kg/h,400,4000,410000,2200,0.7,,1,0.6,0.2,0.2,0.15,0.2,0.1,0.05,2.5,0.4,0.2,0.1,1.07
-material_factors,solid,Evaporators,Vertical tube,area,m²,11,640,330,36000,0.55,,1,0.6,0.2,0.2,0.15,0.2,0.1,0.05,2.5,0.4,0.2,0.1,1.07
-material_factors,solid,Evaporators,Agitated Falling film,area,m²,0.5,12,88000,65500,0.75,,1,0.6,0.2,0.2,0.15,0.2,0.1,0.05,2.5,0.4,0.2,0.1,1.07
-material_factors,solid,Exchangers,U-tube shell and tube,area,m²,10,1000,28000,54,1.2,,1,0.6,0.2,0.2,0.15,0.2,0.1,0.05,2.5,0.4,0.2,0.1,1.07
-material_factors,solid,Exchangers,Floating head shell and tube,area,m²,10,1000,32000,70,1.2,,1,0.6,0.2,0.2,0.15,0.2,0.1,0.05,2.5,0.4,0.2,0.1,1.07
-material_factors,solid,Exchangers,Double pipe,area,m²,1,80,1900,2500,1,,1,0.6,0.2,0.2,0.15,0.2,0.1,0.05,2.5,0.4,0.2,0.1,1.07
-material_factors,solid,Exchangers,Thermosiphon reboiler,area,m²,10,500,30400,122,1.1,,1,0.6,0.2,0.2,0.15,0.2,0.1,0.05,2.5,0.4,0.2,0.1,1.07
-material_factors,solid,Exchangers,U-tube Kettle reboiler,area,m²,10,500,29000,400,0.9,,1,0.6,0.2,0.2,0.15,0.2,0.1,0.05,2.5,0.4,0.2,0.1,1.07
-material_factors,solid,Exchangers,Plate and frame,area,m²,1,500,1600,210,0.95,,1,0.6,0.2,0.2,0.15,0.2,0.1,0.05,2.5,0.4,0.2,0.1,1.07
-material_factors,solid,Filters,Plate and frame,capacity,m³,0.4,1.4,128000,89000,0.5,,1,0.6,0.2,0.2,0.15,0.2,0.1,0.05,2.5,0.4,0.2,0.1,1.07
-material_factors,solid,Filters,Vacuum drum,area,m²,10,180,-73000,93000,0.3,,1,0.6,0.2,0.2,0.15,0.2,0.1,0.05,2.5,0.4,0.2,0.1,1.07
-material_factors,solid,Furnaces,Cylindrical,duty,MW,0.2,60,80000,109000,0.8,,1,0.6,0.2,0.2,0.15,0.2,0.1,0.05,2.5,0.4,0.2,0.1,1.07
-material_factors,solid,Furnaces,Box,duty,MW,30,120,43000,111000,0.8,,1,0.6,0.2,0.2,0.15,0.2,0.1,0.05,2.5,0.4,0.2,0.1,1.07
-material_factors,solid,Packings,304 ss Raschig rings,volume,m³,,,0,8000,1,,1,0.6,0.2,0.2,0.15,0.2,0.1,0.05,2.5,0.4,0.2,0.1,1.07
-material_factors,solid,Packings,Ceramic Intalox saddles,volume,m³,,,0,2000,1,,1,0.6,0.2,0.2,0.15,0.2,0.1,0.05,2.5,0.4,0.2,0.1,1.07
-material_factors,solid,Packings,304 ss pall rings,volume,m³,,,0,8500,1,,1,0.6,0.2,0.2,0.15,0.2,0.1,0.05,2.5,0.4,0.2,0.1,1.07
-material_factors,solid,Packings,PVC structured packing,volume,m³,,,0,5500,1,,1,0.6,0.2,0.2,0.15,0.2,0.1,0.05,2.5,0.4,0.2,0.1,1.07
-material_factors,solid,Packings,304 ss structured packing,volume,m³,,,0,7600,1,,1,0.6,0.2,0.2,0.15,0.2,0.1,0.05,2.5,0.4,0.2,0.1,1.07
-material_factors,solid,Pressure Vessels,"Vertical, cs ",shell mass,kg,160,250000,11600,34,0.85,,1,0.6,0.2,0.2,0.15,0.2,0.1,0.05,2.5,0.4,0.2,0.1,1.07
-material_factors,solid,Pressure Vessels,"Horizontal, cs ",shell mass,kg,160,250000,10200,31,0.85,,1,0.6,0.2,0.2,0.15,0.2,0.1,0.05,2.5,0.4,0.2,0.1,1.07
-material_factors,solid,Pressure Vessels,"Vertical, 304 ss ",shell mass,kg,120,250000,17400,79,0.85,,1,0.6,0.2,0.2,0.15,0.2,0.1,0.05,2.5,0.4,0.2,0.1,1.07
-material_factors,solid,Pressure Vessels,"Horizontal, 304 ss ",shell mass,kg,120,50000,12800,73,0.85,,1,0.6,0.2,0.2,0.15,0.2,0.1,0.05,2.5,0.4,0.2,0.1,1.07
-material_factors,solid,Pumps and Drivers,Single-stage centrifugal ,flow ,liters/s,0.2,126,8000,240,0.9,,1,0.6,0.2,0.2,0.15,0.2,0.1,0.05,2.5,0.4,0.2,0.1,1.07
-material_factors,solid,Pumps and Drivers,Explosion proof motor ,power,kW,1,2500,-1100,2100,0.6,,1,0.6,0.2,0.2,0.15,0.2,0.1,0.05,2.5,0.4,0.2,0.1,1.07
-material_factors,solid,Pumps and Drivers,Condensing steam turbine,power,kW,100,20000,-14000,1900,0.75,,1,0.6,0.2,0.2,0.15,0.2,0.1,0.05,2.5,0.4,0.2,0.1,1.07
-material_factors,solid,Reactors,"Jacketed, agitated",volume,m³,0.5,100,61500,32500,0.8,,1,0.6,0.2,0.2,0.15,0.2,0.1,0.05,2.5,0.4,0.2,0.1,1.07
-material_factors,solid,Reactors,"Jacketed, agitated, glass lined",volume,m³,0.5,25,12800,88200,0.4,,1,0.6,0.2,0.2,0.15,0.2,0.1,0.05,2.5,0.4,0.2,0.1,1.07
-material_factors,solid,Tanks,Floating roof,capacity,m³,100,10000,113000,3250,0.65,,1,0.6,0.2,0.2,0.15,0.2,0.1,0.05,2.5,0.4,0.2,0.1,1.07
-material_factors,solid,Tanks,Cone roof,capacity,m³,10,4000,5800,1600,0.7,,1,0.6,0.2,0.2,0.15,0.2,0.1,0.05,2.5,0.4,0.2,0.1,1.07
-material_factors,solid,Trays,Sieve trays,diameter,m,0.5,5,130,440,1.8,,1,0.6,0.2,0.2,0.15,0.2,0.1,0.05,2.5,0.4,0.2,0.1,1.07
-material_factors,solid,Trays,Valve trays,diameter,m,0.5,5,210,400,1.9,,1,0.6,0.2,0.2,0.15,0.2,0.1,0.05,2.5,0.4,0.2,0.1,1.07
-material_factors,solid,Trays,Bubble cap trays,diameter,m,0.5,5,340,640,1.9,,1,0.6,0.2,0.2,0.15,0.2,0.1,0.05,2.5,0.4,0.2,0.1,1.07
-material_factors,solid,Utilities,Cooling tower and pumps,flow ,liters/s,100,10000,170000,1500,0.9,,1,0.6,0.2,0.2,0.15,0.2,0.1,0.05,2.5,0.4,0.2,0.1,1.07
-material_factors,solid,Utilities,Packaged mechanical refrigerator ,evaporator duty,kW,50,1500,24000,3500,0.9,,1,0.6,0.2,0.2,0.15,0.2,0.1,0.05,2.5,0.4,0.2,0.1,1.07
-material_factors,solid,Utilities,Water ion exchange plant,flow ,m³/h,1,50,14000,6200,0.75,,1,0.6,0.2,0.2,0.15,0.2,0.1,0.05,2.5,0.4,0.2,0.1,1.07
-material_factors,fluid,Agitators and Mixers,Propeller ,driver power,kW,5,75,17000,1130,1.05,,1,0.5,0.6,0.3,0.2,0.3,0.2,0.1,3.2,0.4,0.25,0.1,1.07
-material_factors,fluid,Agitators and Mixers,Spiral ribbon mixer,driver power,kW,5,35,30800,125,2,,1,0.5,0.6,0.3,0.2,0.3,0.2,0.1,3.2,0.4,0.25,0.1,1.07
-material_factors,fluid,Agitators and Mixers,Static mixer,flowrate,liters/s,1,50,570,1170,0.4,,1,0.5,0.6,0.3,0.2,0.3,0.2,0.1,3.2,0.4,0.25,0.1,1.07
-material_factors,fluid,Boilers,"Packaged, 15 to 40 bar",steam mass flowrate,kg/h ,5000,200000,124000,10,1,,1,0.5,0.6,0.3,0.2,0.3,0.2,0.1,3.2,0.4,0.25,0.1,1.07
-material_factors,fluid,Boilers,"Field erected, 10 to 70 bar",steam mass flowrate,kg/h ,20000,800000,130000,53,0.9,,1,0.5,0.6,0.3,0.2,0.3,0.2,0.1,3.2,0.4,0.25,0.1,1.07
-material_factors,fluid,Centrifuges,High-speed disk,diameter,m,0.26,0.49,57000,480000,0.7,,1,0.5,0.6,0.3,0.2,0.3,0.2,0.1,3.2,0.4,0.25,0.1,1.07
-material_factors,fluid,Centrifuges,Atmospheric suspended basket,power,kW,2,20,65000,750,1.5,,1,0.5,0.6,0.3,0.2,0.3,0.2,0.1,3.2,0.4,0.25,0.1,1.07
-material_factors,fluid,Compressors,Blower,flowrate,m³/h,200,5000,4450,57,0.8,,1,0.5,0.6,0.3,0.2,0.3,0.2,0.1,3.2,0.4,0.25,0.1,1.07
-material_factors,fluid,Compressors,Centrifugal,driver power,kW,75,30000,580000,20000,0.6,,1,0.5,0.6,0.3,0.2,0.3,0.2,0.1,3.2,0.4,0.25,0.1,1.07
-material_factors,fluid,Compressors,Reciprocating,driver power,kW,93,16800,260000,2700,0.75,,1,0.5,0.6,0.3,0.2,0.3,0.2,0.1,3.2,0.4,0.25,0.1,1.07
-material_factors,fluid,Conveyors,"Belt, 0.5 m wide",length,m,10,500,41000,730,1,,1,0.5,0.6,0.3,0.2,0.3,0.2,0.1,3.2,0.4,0.25,0.1,1.07
-material_factors,fluid,Conveyors,"Belt, 1.0 m wide",length,m,10,500,46000,1320,1,,1,0.5,0.6,0.3,0.2,0.3,0.2,0.1,3.2,0.4,0.25,0.1,1.07
-material_factors,fluid,Conveyors,"Bucket elevator, 0.5 m bucket",height,m,10,30,17000,2600,1,,1,0.5,0.6,0.3,0.2,0.3,0.2,0.1,3.2,0.4,0.25,0.1,1.07
-material_factors,fluid,Crushers,Reversible hammer mill,mass flowrate,t/h,30,400,68400,730,1,,1,0.5,0.6,0.3,0.2,0.3,0.2,0.1,3.2,0.4,0.25,0.1,1.07
-material_factors,fluid,Crushers,Pulverizers,mass flowrate,kg/h,200,4000,16000,670,0.5,,1,0.5,0.6,0.3,0.2,0.3,0.2,0.1,3.2,0.4,0.25,0.1,1.07
-material_factors,fluid,Crushers,Jaw crusher,mass flowrate,t/h,100,600,-8000,62000,0.5,,1,0.5,0.6,0.3,0.2,0.3,0.2,0.1,3.2,0.4,0.25,0.1,1.07
-material_factors,fluid,Crushers,Gyratory crusher,mass flowrate,t/h,200,3000,5000,5100,0.7,,1,0.5,0.6,0.3,0.2,0.3,0.2,0.1,3.2,0.4,0.25,0.1,1.07
-material_factors,fluid,Crushers,Ball mill,mass flowrate,t/h,0.7,60,-23000,242000,0.4,,1,0.5,0.6,0.3,0.2,0.3,0.2,0.1,3.2,0.4,0.25,0.1,1.07
-material_factors,fluid,Crystallizers,Scraped surface crystallizer,length,m,7,280,10000,13200,0.8,,1,0.5,0.6,0.3,0.2,0.3,0.2,0.1,3.2,0.4,0.25,0.1,1.07
-material_factors,fluid,Dryers,Direct contact rotary,area,m²,11,180,15000,10500,0.9,,1,0.5,0.6,0.3,0.2,0.3,0.2,0.1,3.2,0.4,0.25,0.1,1.07
-material_factors,fluid,Dryers,Atmospheric tray batch,area,m²,3,20,10000,7900,0.5,,1,0.5,0.6,0.3,0.2,0.3,0.2,0.1,3.2,0.4,0.25,0.1,1.07
-material_factors,fluid,Dryers,Spray dryer,evap rate,kg/h,400,4000,410000,2200,0.7,,1,0.5,0.6,0.3,0.2,0.3,0.2,0.1,3.2,0.4,0.25,0.1,1.07
-material_factors,fluid,Evaporators,Vertical tube,area,m²,11,640,330,36000,0.55,,1,0.5,0.6,0.3,0.2,0.3,0.2,0.1,3.2,0.4,0.25,0.1,1.07
-material_factors,fluid,Evaporators,Agitated Falling film,area,m²,0.5,12,88000,65500,0.75,,1,0.5,0.6,0.3,0.2,0.3,0.2,0.1,3.2,0.4,0.25,0.1,1.07
-material_factors,fluid,Exchangers,U-tube shell and tube,area,m²,10,1000,28000,54,1.2,,1,0.5,0.6,0.3,0.2,0.3,0.2,0.1,3.2,0.4,0.25,0.1,1.07
-material_factors,fluid,Exchangers,Floating head shell and tube,area,m²,10,1000,32000,70,1.2,,1,0.5,0.6,0.3,0.2,0.3,0.2,0.1,3.2,0.4,0.25,0.1,1.07
-material_factors,fluid,Exchangers,Double pipe,area,m²,1,80,1900,2500,1,,1,0.5,0.6,0.3,0.2,0.3,0.2,0.1,3.2,0.4,0.25,0.1,1.07
-material_factors,fluid,Exchangers,Thermosiphon reboiler,area,m²,10,500,30400,122,1.1,,1,0.5,0.6,0.3,0.2,0.3,0.2,0.1,3.2,0.4,0.25,0.1,1.07
-material_factors,fluid,Exchangers,U-tube Kettle reboiler,area,m²,10,500,29000,400,0.9,,1,0.5,0.6,0.3,0.2,0.3,0.2,0.1,3.2,0.4,0.25,0.1,1.07
-material_factors,fluid,Exchangers,Plate and frame,area,m²,1,500,1600,210,0.95,,1,0.5,0.6,0.3,0.2,0.3,0.2,0.1,3.2,0.4,0.25,0.1,1.07
-material_factors,fluid,Filters,Plate and frame,capacity,m³,0.4,1.4,128000,89000,0.5,,1,0.5,0.6,0.3,0.2,0.3,0.2,0.1,3.2,0.4,0.25,0.1,1.07
-material_factors,fluid,Filters,Vacuum drum,area,m²,10,180,-73000,93000,0.3,,1,0.5,0.6,0.3,0.2,0.3,0.2,0.1,3.2,0.4,0.25,0.1,1.07
-material_factors,fluid,Furnaces,Cylindrical,duty,MW,0.2,60,80000,109000,0.8,,1,0.5,0.6,0.3,0.2,0.3,0.2,0.1,3.2,0.4,0.25,0.1,1.07
-material_factors,fluid,Furnaces,Box,duty,MW,30,120,43000,111000,0.8,,1,0.5,0.6,0.3,0.2,0.3,0.2,0.1,3.2,0.4,0.25,0.1,1.07
-material_factors,fluid,Packings,304 ss Raschig rings,volume,m³,,,0,8000,1,,1,0.5,0.6,0.3,0.2,0.3,0.2,0.1,3.2,0.4,0.25,0.1,1.07
-material_factors,fluid,Packings,Ceramic Intalox saddles,volume,m³,,,0,2000,1,,1,0.5,0.6,0.3,0.2,0.3,0.2,0.1,3.2,0.4,0.25,0.1,1.07
-material_factors,fluid,Packings,304 ss pall rings,volume,m³,,,0,8500,1,,1,0.5,0.6,0.3,0.2,0.3,0.2,0.1,3.2,0.4,0.25,0.1,1.07
-material_factors,fluid,Packings,PVC structured packing,volume,m³,,,0,5500,1,,1,0.5,0.6,0.3,0.2,0.3,0.2,0.1,3.2,0.4,0.25,0.1,1.07
-material_factors,fluid,Packings,304 ss structured packing,volume,m³,,,0,7600,1,,1,0.5,0.6,0.3,0.2,0.3,0.2,0.1,3.2,0.4,0.25,0.1,1.07
-material_factors,fluid,Pressure Vessels,"Vertical, cs ",shell mass,kg,160,250000,11600,34,0.85,,1,0.5,0.6,0.3,0.2,0.3,0.2,0.1,3.2,0.4,0.25,0.1,1.07
-material_factors,fluid,Pressure Vessels,"Horizontal, cs ",shell mass,kg,160,250000,10200,31,0.85,,1,0.5,0.6,0.3,0.2,0.3,0.2,0.1,3.2,0.4,0.25,0.1,1.07
-material_factors,fluid,Pressure Vessels,"Vertical, 304 ss ",shell mass,kg,120,250000,17400,79,0.85,,1,0.5,0.6,0.3,0.2,0.3,0.2,0.1,3.2,0.4,0.25,0.1,1.07
-material_factors,fluid,Pressure Vessels,"Horizontal, 304 ss ",shell mass,kg,120,50000,12800,73,0.85,,1,0.5,0.6,0.3,0.2,0.3,0.2,0.1,3.2,0.4,0.25,0.1,1.07
-material_factors,fluid,Pumps and Drivers,Single-stage centrifugal ,flow ,liters/s,0.2,126,8000,240,0.9,,1,0.5,0.6,0.3,0.2,0.3,0.2,0.1,3.2,0.4,0.25,0.1,1.07
-material_factors,fluid,Pumps and Drivers,Explosion proof motor ,power,kW,1,2500,-1100,2100,0.6,,1,0.5,0.6,0.3,0.2,0.3,0.2,0.1,3.2,0.4,0.25,0.1,1.07
-material_factors,fluid,Pumps and Drivers,Condensing steam turbine,power,kW,100,20000,-14000,1900,0.75,,1,0.5,0.6,0.3,0.2,0.3,0.2,0.1,3.2,0.4,0.25,0.1,1.07
-material_factors,fluid,Reactors,"Jacketed, agitated",volume,m³,0.5,100,61500,32500,0.8,,1,0.5,0.6,0.3,0.2,0.3,0.2,0.1,3.2,0.4,0.25,0.1,1.07
-material_factors,fluid,Reactors,"Jacketed, agitated, glass lined",volume,m³,0.5,25,12800,88200,0.4,,1,0.5,0.6,0.3,0.2,0.3,0.2,0.1,3.2,0.4,0.25,0.1,1.07
-material_factors,fluid,Tanks,Floating roof,capacity,m³,100,10000,113000,3250,0.65,,1,0.5,0.6,0.3,0.2,0.3,0.2,0.1,3.2,0.4,0.25,0.1,1.07
-material_factors,fluid,Tanks,Cone roof,capacity,m³,10,4000,5800,1600,0.7,,1,0.5,0.6,0.3,0.2,0.3,0.2,0.1,3.2,0.4,0.25,0.1,1.07
-material_factors,fluid,Trays,Sieve trays,diameter,m,0.5,5,130,440,1.8,,1,0.5,0.6,0.3,0.2,0.3,0.2,0.1,3.2,0.4,0.25,0.1,1.07
-material_factors,fluid,Trays,Valve trays,diameter,m,0.5,5,210,400,1.9,,1,0.5,0.6,0.3,0.2,0.3,0.2,0.1,3.2,0.4,0.25,0.1,1.07
-material_factors,fluid,Trays,Bubble cap trays,diameter,m,0.5,5,340,640,1.9,,1,0.5,0.6,0.3,0.2,0.3,0.2,0.1,3.2,0.4,0.25,0.1,1.07
-material_factors,fluid,Utilities,Cooling tower and pumps,flow ,liters/s,100,10000,170000,1500,0.9,,1,0.5,0.6,0.3,0.2,0.3,0.2,0.1,3.2,0.4,0.25,0.1,1.07
-material_factors,fluid,Utilities,Packaged mechanical refrigerator ,evaporator duty,kW,50,1500,24000,3500,0.9,,1,0.5,0.6,0.3,0.2,0.3,0.2,0.1,3.2,0.4,0.25,0.1,1.07
-material_factors,fluid,Utilities,Water ion exchange plant,flow ,m³/h,1,50,14000,6200,0.75,,1,0.5,0.6,0.3,0.2,0.3,0.2,0.1,3.2,0.4,0.25,0.1,1.07
-material_factors,mixed,Agitators and Mixers,Propeller ,driver power,kW,5,75,17000,1130,1.05,,1,0.3,0.8,0.3,0.2,0.3,0.2,0.1,3.3,0.3,0.3,0.1,1.07
-material_factors,mixed,Agitators and Mixers,Spiral ribbon mixer,driver power,kW,5,35,30800,125,2,,1,0.3,0.8,0.3,0.2,0.3,0.2,0.1,3.3,0.3,0.3,0.1,1.07
-material_factors,mixed,Agitators and Mixers,Static mixer,flowrate,liters/s,1,50,570,1170,0.4,,1,0.3,0.8,0.3,0.2,0.3,0.2,0.1,3.3,0.3,0.3,0.1,1.07
-material_factors,mixed,Boilers,"Packaged, 15 to 40 bar",steam mass flowrate,kg/h ,5000,200000,124000,10,1,,1,0.3,0.8,0.3,0.2,0.3,0.2,0.1,3.3,0.3,0.3,0.1,1.07
-material_factors,mixed,Boilers,"Field erected, 10 to 70 bar",steam mass flowrate,kg/h ,20000,800000,130000,53,0.9,,1,0.3,0.8,0.3,0.2,0.3,0.2,0.1,3.3,0.3,0.3,0.1,1.07
-material_factors,mixed,Centrifuges,High-speed disk,diameter,m,0.26,0.49,57000,480000,0.7,,1,0.3,0.8,0.3,0.2,0.3,0.2,0.1,3.3,0.3,0.3,0.1,1.07
-material_factors,mixed,Centrifuges,Atmospheric suspended basket,power,kW,2,20,65000,750,1.5,,1,0.3,0.8,0.3,0.2,0.3,0.2,0.1,3.3,0.3,0.3,0.1,1.07
-material_factors,mixed,Compressors,Blower,flowrate,m³/h,200,5000,4450,57,0.8,,1,0.3,0.8,0.3,0.2,0.3,0.2,0.1,3.3,0.3,0.3,0.1,1.07
-material_factors,mixed,Compressors,Centrifugal,driver power,kW,75,30000,580000,20000,0.6,,1,0.3,0.8,0.3,0.2,0.3,0.2,0.1,3.3,0.3,0.3,0.1,1.07
-material_factors,mixed,Compressors,Reciprocating,driver power,kW,93,16800,260000,2700,0.75,,1,0.3,0.8,0.3,0.2,0.3,0.2,0.1,3.3,0.3,0.3,0.1,1.07
-material_factors,mixed,Conveyors,"Belt, 0.5 m wide",length,m,10,500,41000,730,1,,1,0.3,0.8,0.3,0.2,0.3,0.2,0.1,3.3,0.3,0.3,0.1,1.07
-material_factors,mixed,Conveyors,"Belt, 1.0 m wide",length,m,10,500,46000,1320,1,,1,0.3,0.8,0.3,0.2,0.3,0.2,0.1,3.3,0.3,0.3,0.1,1.07
-material_factors,mixed,Conveyors,"Bucket elevator, 0.5 m bucket",height,m,10,30,17000,2600,1,,1,0.3,0.8,0.3,0.2,0.3,0.2,0.1,3.3,0.3,0.3,0.1,1.07
-material_factors,mixed,Crushers,Reversible hammer mill,mass flowrate,t/h,30,400,68400,730,1,,1,0.3,0.8,0.3,0.2,0.3,0.2,0.1,3.3,0.3,0.3,0.1,1.07
-material_factors,mixed,Crushers,Pulverizers,mass flowrate,kg/h,200,4000,16000,670,0.5,,1,0.3,0.8,0.3,0.2,0.3,0.2,0.1,3.3,0.3,0.3,0.1,1.07
-material_factors,mixed,Crushers,Jaw crusher,mass flowrate,t/h,100,600,-8000,62000,0.5,,1,0.3,0.8,0.3,0.2,0.3,0.2,0.1,3.3,0.3,0.3,0.1,1.07
-material_factors,mixed,Crushers,Gyratory crusher,mass flowrate,t/h,200,3000,5000,5100,0.7,,1,0.3,0.8,0.3,0.2,0.3,0.2,0.1,3.3,0.3,0.3,0.1,1.07
-material_factors,mixed,Crushers,Ball mill,mass flowrate,t/h,0.7,60,-23000,242000,0.4,,1,0.3,0.8,0.3,0.2,0.3,0.2,0.1,3.3,0.3,0.3,0.1,1.07
-material_factors,mixed,Crystallizers,Scraped surface crystallizer,length,m,7,280,10000,13200,0.8,,1,0.3,0.8,0.3,0.2,0.3,0.2,0.1,3.3,0.3,0.3,0.1,1.07
-material_factors,mixed,Dryers,Direct contact rotary,area,m²,11,180,15000,10500,0.9,,1,0.3,0.8,0.3,0.2,0.3,0.2,0.1,3.3,0.3,0.3,0.1,1.07
-material_factors,mixed,Dryers,Atmospheric tray batch,area,m²,3,20,10000,7900,0.5,,1,0.3,0.8,0.3,0.2,0.3,0.2,0.1,3.3,0.3,0.3,0.1,1.07
-material_factors,mixed,Dryers,Spray dryer,evap rate,kg/h,400,4000,410000,2200,0.7,,1,0.3,0.8,0.3,0.2,0.3,0.2,0.1,3.3,0.3,0.3,0.1,1.07
-material_factors,mixed,Evaporators,Vertical tube,area,m²,11,640,330,36000,0.55,,1,0.3,0.8,0.3,0.2,0.3,0.2,0.1,3.3,0.3,0.3,0.1,1.07
-material_factors,mixed,Evaporators,Agitated Falling film,area,m²,0.5,12,88000,65500,0.75,,1,0.3,0.8,0.3,0.2,0.3,0.2,0.1,3.3,0.3,0.3,0.1,1.07
-material_factors,mixed,Exchangers,U-tube shell and tube,area,m²,10,1000,28000,54,1.2,,1,0.3,0.8,0.3,0.2,0.3,0.2,0.1,3.3,0.3,0.3,0.1,1.07
-material_factors,mixed,Exchangers,Floating head shell and tube,area,m²,10,1000,32000,70,1.2,,1,0.3,0.8,0.3,0.2,0.3,0.2,0.1,3.3,0.3,0.3,0.1,1.07
-material_factors,mixed,Exchangers,Double pipe,area,m²,1,80,1900,2500,1,,1,0.3,0.8,0.3,0.2,0.3,0.2,0.1,3.3,0.3,0.3,0.1,1.07
-material_factors,mixed,Exchangers,Thermosiphon reboiler,area,m²,10,500,30400,122,1.1,,1,0.3,0.8,0.3,0.2,0.3,0.2,0.1,3.3,0.3,0.3,0.1,1.07
-material_factors,mixed,Exchangers,U-tube Kettle reboiler,area,m²,10,500,29000,400,0.9,,1,0.3,0.8,0.3,0.2,0.3,0.2,0.1,3.3,0.3,0.3,0.1,1.07
-material_factors,mixed,Exchangers,Plate and frame,area,m²,1,500,1600,210,0.95,,1,0.3,0.8,0.3,0.2,0.3,0.2,0.1,3.3,0.3,0.3,0.1,1.07
-material_factors,mixed,Filters,Plate and frame,capacity,m³,0.4,1.4,128000,89000,0.5,,1,0.3,0.8,0.3,0.2,0.3,0.2,0.1,3.3,0.3,0.3,0.1,1.07
-material_factors,mixed,Filters,Vacuum drum,area,m²,10,180,-73000,93000,0.3,,1,0.3,0.8,0.3,0.2,0.3,0.2,0.1,3.3,0.3,0.3,0.1,1.07
-material_factors,mixed,Furnaces,Cylindrical,duty,MW,0.2,60,80000,109000,0.8,,1,0.3,0.8,0.3,0.2,0.3,0.2,0.1,3.3,0.3,0.3,0.1,1.07
-material_factors,mixed,Furnaces,Box,duty,MW,30,120,43000,111000,0.8,,1,0.3,0.8,0.3,0.2,0.3,0.2,0.1,3.3,0.3,0.3,0.1,1.07
-material_factors,mixed,Packings,304 ss Raschig rings,volume,m³,,,0,8000,1,,1,0.3,0.8,0.3,0.2,0.3,0.2,0.1,3.3,0.3,0.3,0.1,1.07
-material_factors,mixed,Packings,Ceramic Intalox saddles,volume,m³,,,0,2000,1,,1,0.3,0.8,0.3,0.2,0.3,0.2,0.1,3.3,0.3,0.3,0.1,1.07
-material_factors,mixed,Packings,304 ss pall rings,volume,m³,,,0,8500,1,,1,0.3,0.8,0.3,0.2,0.3,0.2,0.1,3.3,0.3,0.3,0.1,1.07
-material_factors,mixed,Packings,PVC structured packing,volume,m³,,,0,5500,1,,1,0.3,0.8,0.3,0.2,0.3,0.2,0.1,3.3,0.3,0.3,0.1,1.07
-material_factors,mixed,Packings,304 ss structured packing,volume,m³,,,0,7600,1,,1,0.3,0.8,0.3,0.2,0.3,0.2,0.1,3.3,0.3,0.3,0.1,1.07
-material_factors,mixed,Pressure Vessels,"Vertical, cs ",shell mass,kg,160,250000,11600,34,0.85,,1,0.3,0.8,0.3,0.2,0.3,0.2,0.1,3.3,0.3,0.3,0.1,1.07
-material_factors,mixed,Pressure Vessels,"Horizontal, cs ",shell mass,kg,160,250000,10200,31,0.85,,1,0.3,0.8,0.3,0.2,0.3,0.2,0.1,3.3,0.3,0.3,0.1,1.07
-material_factors,mixed,Pressure Vessels,"Vertical, 304 ss ",shell mass,kg,120,250000,17400,79,0.85,,1,0.3,0.8,0.3,0.2,0.3,0.2,0.1,3.3,0.3,0.3,0.1,1.07
-material_factors,mixed,Pressure Vessels,"Horizontal, 304 ss ",shell mass,kg,120,50000,12800,73,0.85,,1,0.3,0.8,0.3,0.2,0.3,0.2,0.1,3.3,0.3,0.3,0.1,1.07
-material_factors,mixed,Pumps and Drivers,Single-stage centrifugal ,flow ,liters/s,0.2,126,8000,240,0.9,,1,0.3,0.8,0.3,0.2,0.3,0.2,0.1,3.3,0.3,0.3,0.1,1.07
-material_factors,mixed,Pumps and Drivers,Explosion proof motor ,power,kW,1,2500,-1100,2100,0.6,,1,0.3,0.8,0.3,0.2,0.3,0.2,0.1,3.3,0.3,0.3,0.1,1.07
-material_factors,mixed,Pumps and Drivers,Condensing steam turbine,power,kW,100,20000,-14000,1900,0.75,,1,0.3,0.8,0.3,0.2,0.3,0.2,0.1,3.3,0.3,0.3,0.1,1.07
-material_factors,mixed,Reactors,"Jacketed, agitated",volume,m³,0.5,100,61500,32500,0.8,,1,0.3,0.8,0.3,0.2,0.3,0.2,0.1,3.3,0.3,0.3,0.1,1.07
-material_factors,mixed,Reactors,"Jacketed, agitated, glass lined",volume,m³,0.5,25,12800,88200,0.4,,1,0.3,0.8,0.3,0.2,0.3,0.2,0.1,3.3,0.3,0.3,0.1,1.07
-material_factors,mixed,Tanks,Floating roof,capacity,m³,100,10000,113000,3250,0.65,,1,0.3,0.8,0.3,0.2,0.3,0.2,0.1,3.3,0.3,0.3,0.1,1.07
-material_factors,mixed,Tanks,Cone roof,capacity,m³,10,4000,5800,1600,0.7,,1,0.3,0.8,0.3,0.2,0.3,0.2,0.1,3.3,0.3,0.3,0.1,1.07
-material_factors,mixed,Trays,Sieve trays,diameter,m,0.5,5,130,440,1.8,,1,0.3,0.8,0.3,0.2,0.3,0.2,0.1,3.3,0.3,0.3,0.1,1.07
-material_factors,mixed,Trays,Valve trays,diameter,m,0.5,5,210,400,1.9,,1,0.3,0.8,0.3,0.2,0.3,0.2,0.1,3.3,0.3,0.3,0.1,1.07
-material_factors,mixed,Trays,Bubble cap trays,diameter,m,0.5,5,340,640,1.9,,1,0.3,0.8,0.3,0.2,0.3,0.2,0.1,3.3,0.3,0.3,0.1,1.07
-material_factors,mixed,Utilities,Cooling tower and pumps,flow ,liters/s,100,10000,170000,1500,0.9,,1,0.3,0.8,0.3,0.2,0.3,0.2,0.1,3.3,0.3,0.3,0.1,1.07
-material_factors,mixed,Utilities,Packaged mechanical refrigerator ,evaporator duty,kW,50,1500,24000,3500,0.9,,1,0.3,0.8,0.3,0.2,0.3,0.2,0.1,3.3,0.3,0.3,0.1,1.07
-material_factors,mixed,Utilities,Water ion exchange plant,flow ,m³/h,1,50,14000,6200,0.75,,1,0.3,0.8,0.3,0.2,0.3,0.2,0.1,3.3,0.3,0.3,0.1,1.07
+Method,Plant Type,Equipment,Equipment Type,Sizing Quantity,Units,S lower,S upper,a,b,n,Installation Factor,Material Factor,Equipment Erection Factor,Piping Factor,Instrumentation and Control Factor,Electrical Factor,Civil Factor,Structures and Buildings Factor,Lagging and Paint Factor,ISBL Cost Factor,Offsites Factor,Design and Engineering Factor,Contingency,Location Factor
+material factors,solid,Agitators and Mixers,Propeller ,driver power,kW,5,75,17000,1130,1.05,,1,0.6,0.2,0.2,0.15,0.2,0.1,0.05,2.5,0.4,0.2,0.1,1.07
+material factors,solid,Agitators and Mixers,Spiral ribbon mixer,driver power,kW,5,35,30800,125,2,,1,0.6,0.2,0.2,0.15,0.2,0.1,0.05,2.5,0.4,0.2,0.1,1.07
+material factors,solid,Agitators and Mixers,Static mixer,flowrate,liters/s,1,50,570,1170,0.4,,1,0.6,0.2,0.2,0.15,0.2,0.1,0.05,2.5,0.4,0.2,0.1,1.07
+material factors,solid,Boilers,"Packaged, 15 to 40 bar",steam mass flowrate,kg/h ,5000,200000,124000,10,1,,1,0.6,0.2,0.2,0.15,0.2,0.1,0.05,2.5,0.4,0.2,0.1,1.07
+material factors,solid,Boilers,"Field erected, 10 to 70 bar",steam mass flowrate,kg/h ,20000,800000,130000,53,0.9,,1,0.6,0.2,0.2,0.15,0.2,0.1,0.05,2.5,0.4,0.2,0.1,1.07
+material factors,solid,Centrifuges,High-speed disk,diameter,m,0.26,0.49,57000,480000,0.7,,1,0.6,0.2,0.2,0.15,0.2,0.1,0.05,2.5,0.4,0.2,0.1,1.07
+material factors,solid,Centrifuges,Atmospheric suspended basket,power,kW,2,20,65000,750,1.5,,1,0.6,0.2,0.2,0.15,0.2,0.1,0.05,2.5,0.4,0.2,0.1,1.07
+material factors,solid,Compressors,Blower,flowrate,m³/h,200,5000,4450,57,0.8,,1,0.6,0.2,0.2,0.15,0.2,0.1,0.05,2.5,0.4,0.2,0.1,1.07
+material factors,solid,Compressors,Centrifugal,driver power,kW,75,30000,580000,20000,0.6,,1,0.6,0.2,0.2,0.15,0.2,0.1,0.05,2.5,0.4,0.2,0.1,1.07
+material factors,solid,Compressors,Reciprocating,driver power,kW,93,16800,260000,2700,0.75,,1,0.6,0.2,0.2,0.15,0.2,0.1,0.05,2.5,0.4,0.2,0.1,1.07
+material factors,solid,Conveyors,"Belt, 0.5 m wide",length,m,10,500,41000,730,1,,1,0.6,0.2,0.2,0.15,0.2,0.1,0.05,2.5,0.4,0.2,0.1,1.07
+material factors,solid,Conveyors,"Belt, 1.0 m wide",length,m,10,500,46000,1320,1,,1,0.6,0.2,0.2,0.15,0.2,0.1,0.05,2.5,0.4,0.2,0.1,1.07
+material factors,solid,Conveyors,"Bucket elevator, 0.5 m bucket",height,m,10,30,17000,2600,1,,1,0.6,0.2,0.2,0.15,0.2,0.1,0.05,2.5,0.4,0.2,0.1,1.07
+material factors,solid,Crushers,Reversible hammer mill,mass flowrate,t/h,30,400,68400,730,1,,1,0.6,0.2,0.2,0.15,0.2,0.1,0.05,2.5,0.4,0.2,0.1,1.07
+material factors,solid,Crushers,Pulverizers,mass flowrate,kg/h,200,4000,16000,670,0.5,,1,0.6,0.2,0.2,0.15,0.2,0.1,0.05,2.5,0.4,0.2,0.1,1.07
+material factors,solid,Crushers,Jaw crusher,mass flowrate,t/h,100,600,-8000,62000,0.5,,1,0.6,0.2,0.2,0.15,0.2,0.1,0.05,2.5,0.4,0.2,0.1,1.07
+material factors,solid,Crushers,Gyratory crusher,mass flowrate,t/h,200,3000,5000,5100,0.7,,1,0.6,0.2,0.2,0.15,0.2,0.1,0.05,2.5,0.4,0.2,0.1,1.07
+material factors,solid,Crushers,Ball mill,mass flowrate,t/h,0.7,60,-23000,242000,0.4,,1,0.6,0.2,0.2,0.15,0.2,0.1,0.05,2.5,0.4,0.2,0.1,1.07
+material factors,solid,Crystallizers,Scraped surface crystallizer,length,m,7,280,10000,13200,0.8,,1,0.6,0.2,0.2,0.15,0.2,0.1,0.05,2.5,0.4,0.2,0.1,1.07
+material factors,solid,Dryers,Direct contact rotary,area,m²,11,180,15000,10500,0.9,,1,0.6,0.2,0.2,0.15,0.2,0.1,0.05,2.5,0.4,0.2,0.1,1.07
+material factors,solid,Dryers,Atmospheric tray batch,area,m²,3,20,10000,7900,0.5,,1,0.6,0.2,0.2,0.15,0.2,0.1,0.05,2.5,0.4,0.2,0.1,1.07
+material factors,solid,Dryers,Spray dryer,evap rate,kg/h,400,4000,410000,2200,0.7,,1,0.6,0.2,0.2,0.15,0.2,0.1,0.05,2.5,0.4,0.2,0.1,1.07
+material factors,solid,Evaporators,Vertical tube,area,m²,11,640,330,36000,0.55,,1,0.6,0.2,0.2,0.15,0.2,0.1,0.05,2.5,0.4,0.2,0.1,1.07
+material factors,solid,Evaporators,Agitated Falling film,area,m²,0.5,12,88000,65500,0.75,,1,0.6,0.2,0.2,0.15,0.2,0.1,0.05,2.5,0.4,0.2,0.1,1.07
+material factors,solid,Exchangers,U-tube shell and tube,area,m²,10,1000,28000,54,1.2,,1,0.6,0.2,0.2,0.15,0.2,0.1,0.05,2.5,0.4,0.2,0.1,1.07
+material factors,solid,Exchangers,Floating head shell and tube,area,m²,10,1000,32000,70,1.2,,1,0.6,0.2,0.2,0.15,0.2,0.1,0.05,2.5,0.4,0.2,0.1,1.07
+material factors,solid,Exchangers,Double pipe,area,m²,1,80,1900,2500,1,,1,0.6,0.2,0.2,0.15,0.2,0.1,0.05,2.5,0.4,0.2,0.1,1.07
+material factors,solid,Exchangers,Thermosiphon reboiler,area,m²,10,500,30400,122,1.1,,1,0.6,0.2,0.2,0.15,0.2,0.1,0.05,2.5,0.4,0.2,0.1,1.07
+material factors,solid,Exchangers,U-tube Kettle reboiler,area,m²,10,500,29000,400,0.9,,1,0.6,0.2,0.2,0.15,0.2,0.1,0.05,2.5,0.4,0.2,0.1,1.07
+material factors,solid,Exchangers,Plate and frame,area,m²,1,500,1600,210,0.95,,1,0.6,0.2,0.2,0.15,0.2,0.1,0.05,2.5,0.4,0.2,0.1,1.07
+material factors,solid,Filters,Plate and frame,capacity,m³,0.4,1.4,128000,89000,0.5,,1,0.6,0.2,0.2,0.15,0.2,0.1,0.05,2.5,0.4,0.2,0.1,1.07
+material factors,solid,Filters,Vacuum drum,area,m²,10,180,-73000,93000,0.3,,1,0.6,0.2,0.2,0.15,0.2,0.1,0.05,2.5,0.4,0.2,0.1,1.07
+material factors,solid,Furnaces,Cylindrical,duty,MW,0.2,60,80000,109000,0.8,,1,0.6,0.2,0.2,0.15,0.2,0.1,0.05,2.5,0.4,0.2,0.1,1.07
+material factors,solid,Furnaces,Box,duty,MW,30,120,43000,111000,0.8,,1,0.6,0.2,0.2,0.15,0.2,0.1,0.05,2.5,0.4,0.2,0.1,1.07
+material factors,solid,Packings,304 ss Raschig rings,volume,m³,,,0,8000,1,,1,0.6,0.2,0.2,0.15,0.2,0.1,0.05,2.5,0.4,0.2,0.1,1.07
+material factors,solid,Packings,Ceramic Intalox saddles,volume,m³,,,0,2000,1,,1,0.6,0.2,0.2,0.15,0.2,0.1,0.05,2.5,0.4,0.2,0.1,1.07
+material factors,solid,Packings,304 ss pall rings,volume,m³,,,0,8500,1,,1,0.6,0.2,0.2,0.15,0.2,0.1,0.05,2.5,0.4,0.2,0.1,1.07
+material factors,solid,Packings,PVC structured packing,volume,m³,,,0,5500,1,,1,0.6,0.2,0.2,0.15,0.2,0.1,0.05,2.5,0.4,0.2,0.1,1.07
+material factors,solid,Packings,304 ss structured packing,volume,m³,,,0,7600,1,,1,0.6,0.2,0.2,0.15,0.2,0.1,0.05,2.5,0.4,0.2,0.1,1.07
+material factors,solid,Pressure Vessels,"Vertical, cs ",shell mass,kg,160,250000,11600,34,0.85,,1,0.6,0.2,0.2,0.15,0.2,0.1,0.05,2.5,0.4,0.2,0.1,1.07
+material factors,solid,Pressure Vessels,"Horizontal, cs ",shell mass,kg,160,250000,10200,31,0.85,,1,0.6,0.2,0.2,0.15,0.2,0.1,0.05,2.5,0.4,0.2,0.1,1.07
+material factors,solid,Pressure Vessels,"Vertical, 304 ss ",shell mass,kg,120,250000,17400,79,0.85,,1,0.6,0.2,0.2,0.15,0.2,0.1,0.05,2.5,0.4,0.2,0.1,1.07
+material factors,solid,Pressure Vessels,"Horizontal, 304 ss ",shell mass,kg,120,50000,12800,73,0.85,,1,0.6,0.2,0.2,0.15,0.2,0.1,0.05,2.5,0.4,0.2,0.1,1.07
+material factors,solid,Pumps and Drivers,Single-stage centrifugal ,flow ,liters/s,0.2,126,8000,240,0.9,,1,0.6,0.2,0.2,0.15,0.2,0.1,0.05,2.5,0.4,0.2,0.1,1.07
+material factors,solid,Pumps and Drivers,Explosion proof motor ,power,kW,1,2500,-1100,2100,0.6,,1,0.6,0.2,0.2,0.15,0.2,0.1,0.05,2.5,0.4,0.2,0.1,1.07
+material factors,solid,Pumps and Drivers,Condensing steam turbine,power,kW,100,20000,-14000,1900,0.75,,1,0.6,0.2,0.2,0.15,0.2,0.1,0.05,2.5,0.4,0.2,0.1,1.07
+material factors,solid,Reactors,"Jacketed, agitated",volume,m³,0.5,100,61500,32500,0.8,,1,0.6,0.2,0.2,0.15,0.2,0.1,0.05,2.5,0.4,0.2,0.1,1.07
+material factors,solid,Reactors,"Jacketed, agitated, glass lined",volume,m³,0.5,25,12800,88200,0.4,,1,0.6,0.2,0.2,0.15,0.2,0.1,0.05,2.5,0.4,0.2,0.1,1.07
+material factors,solid,Tanks,Floating roof,capacity,m³,100,10000,113000,3250,0.65,,1,0.6,0.2,0.2,0.15,0.2,0.1,0.05,2.5,0.4,0.2,0.1,1.07
+material factors,solid,Tanks,Cone roof,capacity,m³,10,4000,5800,1600,0.7,,1,0.6,0.2,0.2,0.15,0.2,0.1,0.05,2.5,0.4,0.2,0.1,1.07
+material factors,solid,Trays,Sieve trays,diameter,m,0.5,5,130,440,1.8,,1,0.6,0.2,0.2,0.15,0.2,0.1,0.05,2.5,0.4,0.2,0.1,1.07
+material factors,solid,Trays,Valve trays,diameter,m,0.5,5,210,400,1.9,,1,0.6,0.2,0.2,0.15,0.2,0.1,0.05,2.5,0.4,0.2,0.1,1.07
+material factors,solid,Trays,Bubble cap trays,diameter,m,0.5,5,340,640,1.9,,1,0.6,0.2,0.2,0.15,0.2,0.1,0.05,2.5,0.4,0.2,0.1,1.07
+material factors,solid,Utilities,Cooling tower and pumps,flow ,liters/s,100,10000,170000,1500,0.9,,1,0.6,0.2,0.2,0.15,0.2,0.1,0.05,2.5,0.4,0.2,0.1,1.07
+material factors,solid,Utilities,Packaged mechanical refrigerator ,evaporator duty,kW,50,1500,24000,3500,0.9,,1,0.6,0.2,0.2,0.15,0.2,0.1,0.05,2.5,0.4,0.2,0.1,1.07
+material factors,solid,Utilities,Water ion exchange plant,flow ,m³/h,1,50,14000,6200,0.75,,1,0.6,0.2,0.2,0.15,0.2,0.1,0.05,2.5,0.4,0.2,0.1,1.07
+material factors,fluid,Agitators and Mixers,Propeller ,driver power,kW,5,75,17000,1130,1.05,,1,0.5,0.6,0.3,0.2,0.3,0.2,0.1,3.2,0.4,0.25,0.1,1.07
+material factors,fluid,Agitators and Mixers,Spiral ribbon mixer,driver power,kW,5,35,30800,125,2,,1,0.5,0.6,0.3,0.2,0.3,0.2,0.1,3.2,0.4,0.25,0.1,1.07
+material factors,fluid,Agitators and Mixers,Static mixer,flowrate,liters/s,1,50,570,1170,0.4,,1,0.5,0.6,0.3,0.2,0.3,0.2,0.1,3.2,0.4,0.25,0.1,1.07
+material factors,fluid,Boilers,"Packaged, 15 to 40 bar",steam mass flowrate,kg/h ,5000,200000,124000,10,1,,1,0.5,0.6,0.3,0.2,0.3,0.2,0.1,3.2,0.4,0.25,0.1,1.07
+material factors,fluid,Boilers,"Field erected, 10 to 70 bar",steam mass flowrate,kg/h ,20000,800000,130000,53,0.9,,1,0.5,0.6,0.3,0.2,0.3,0.2,0.1,3.2,0.4,0.25,0.1,1.07
+material factors,fluid,Centrifuges,High-speed disk,diameter,m,0.26,0.49,57000,480000,0.7,,1,0.5,0.6,0.3,0.2,0.3,0.2,0.1,3.2,0.4,0.25,0.1,1.07
+material factors,fluid,Centrifuges,Atmospheric suspended basket,power,kW,2,20,65000,750,1.5,,1,0.5,0.6,0.3,0.2,0.3,0.2,0.1,3.2,0.4,0.25,0.1,1.07
+material factors,fluid,Compressors,Blower,flowrate,m³/h,200,5000,4450,57,0.8,,1,0.5,0.6,0.3,0.2,0.3,0.2,0.1,3.2,0.4,0.25,0.1,1.07
+material factors,fluid,Compressors,Centrifugal,driver power,kW,75,30000,580000,20000,0.6,,1,0.5,0.6,0.3,0.2,0.3,0.2,0.1,3.2,0.4,0.25,0.1,1.07
+material factors,fluid,Compressors,Reciprocating,driver power,kW,93,16800,260000,2700,0.75,,1,0.5,0.6,0.3,0.2,0.3,0.2,0.1,3.2,0.4,0.25,0.1,1.07
+material factors,fluid,Conveyors,"Belt, 0.5 m wide",length,m,10,500,41000,730,1,,1,0.5,0.6,0.3,0.2,0.3,0.2,0.1,3.2,0.4,0.25,0.1,1.07
+material factors,fluid,Conveyors,"Belt, 1.0 m wide",length,m,10,500,46000,1320,1,,1,0.5,0.6,0.3,0.2,0.3,0.2,0.1,3.2,0.4,0.25,0.1,1.07
+material factors,fluid,Conveyors,"Bucket elevator, 0.5 m bucket",height,m,10,30,17000,2600,1,,1,0.5,0.6,0.3,0.2,0.3,0.2,0.1,3.2,0.4,0.25,0.1,1.07
+material factors,fluid,Crushers,Reversible hammer mill,mass flowrate,t/h,30,400,68400,730,1,,1,0.5,0.6,0.3,0.2,0.3,0.2,0.1,3.2,0.4,0.25,0.1,1.07
+material factors,fluid,Crushers,Pulverizers,mass flowrate,kg/h,200,4000,16000,670,0.5,,1,0.5,0.6,0.3,0.2,0.3,0.2,0.1,3.2,0.4,0.25,0.1,1.07
+material factors,fluid,Crushers,Jaw crusher,mass flowrate,t/h,100,600,-8000,62000,0.5,,1,0.5,0.6,0.3,0.2,0.3,0.2,0.1,3.2,0.4,0.25,0.1,1.07
+material factors,fluid,Crushers,Gyratory crusher,mass flowrate,t/h,200,3000,5000,5100,0.7,,1,0.5,0.6,0.3,0.2,0.3,0.2,0.1,3.2,0.4,0.25,0.1,1.07
+material factors,fluid,Crushers,Ball mill,mass flowrate,t/h,0.7,60,-23000,242000,0.4,,1,0.5,0.6,0.3,0.2,0.3,0.2,0.1,3.2,0.4,0.25,0.1,1.07
+material factors,fluid,Crystallizers,Scraped surface crystallizer,length,m,7,280,10000,13200,0.8,,1,0.5,0.6,0.3,0.2,0.3,0.2,0.1,3.2,0.4,0.25,0.1,1.07
+material factors,fluid,Dryers,Direct contact rotary,area,m²,11,180,15000,10500,0.9,,1,0.5,0.6,0.3,0.2,0.3,0.2,0.1,3.2,0.4,0.25,0.1,1.07
+material factors,fluid,Dryers,Atmospheric tray batch,area,m²,3,20,10000,7900,0.5,,1,0.5,0.6,0.3,0.2,0.3,0.2,0.1,3.2,0.4,0.25,0.1,1.07
+material factors,fluid,Dryers,Spray dryer,evap rate,kg/h,400,4000,410000,2200,0.7,,1,0.5,0.6,0.3,0.2,0.3,0.2,0.1,3.2,0.4,0.25,0.1,1.07
+material factors,fluid,Evaporators,Vertical tube,area,m²,11,640,330,36000,0.55,,1,0.5,0.6,0.3,0.2,0.3,0.2,0.1,3.2,0.4,0.25,0.1,1.07
+material factors,fluid,Evaporators,Agitated Falling film,area,m²,0.5,12,88000,65500,0.75,,1,0.5,0.6,0.3,0.2,0.3,0.2,0.1,3.2,0.4,0.25,0.1,1.07
+material factors,fluid,Exchangers,U-tube shell and tube,area,m²,10,1000,28000,54,1.2,,1,0.5,0.6,0.3,0.2,0.3,0.2,0.1,3.2,0.4,0.25,0.1,1.07
+material factors,fluid,Exchangers,Floating head shell and tube,area,m²,10,1000,32000,70,1.2,,1,0.5,0.6,0.3,0.2,0.3,0.2,0.1,3.2,0.4,0.25,0.1,1.07
+material factors,fluid,Exchangers,Double pipe,area,m²,1,80,1900,2500,1,,1,0.5,0.6,0.3,0.2,0.3,0.2,0.1,3.2,0.4,0.25,0.1,1.07
+material factors,fluid,Exchangers,Thermosiphon reboiler,area,m²,10,500,30400,122,1.1,,1,0.5,0.6,0.3,0.2,0.3,0.2,0.1,3.2,0.4,0.25,0.1,1.07
+material factors,fluid,Exchangers,U-tube Kettle reboiler,area,m²,10,500,29000,400,0.9,,1,0.5,0.6,0.3,0.2,0.3,0.2,0.1,3.2,0.4,0.25,0.1,1.07
+material factors,fluid,Exchangers,Plate and frame,area,m²,1,500,1600,210,0.95,,1,0.5,0.6,0.3,0.2,0.3,0.2,0.1,3.2,0.4,0.25,0.1,1.07
+material factors,fluid,Filters,Plate and frame,capacity,m³,0.4,1.4,128000,89000,0.5,,1,0.5,0.6,0.3,0.2,0.3,0.2,0.1,3.2,0.4,0.25,0.1,1.07
+material factors,fluid,Filters,Vacuum drum,area,m²,10,180,-73000,93000,0.3,,1,0.5,0.6,0.3,0.2,0.3,0.2,0.1,3.2,0.4,0.25,0.1,1.07
+material factors,fluid,Furnaces,Cylindrical,duty,MW,0.2,60,80000,109000,0.8,,1,0.5,0.6,0.3,0.2,0.3,0.2,0.1,3.2,0.4,0.25,0.1,1.07
+material factors,fluid,Furnaces,Box,duty,MW,30,120,43000,111000,0.8,,1,0.5,0.6,0.3,0.2,0.3,0.2,0.1,3.2,0.4,0.25,0.1,1.07
+material factors,fluid,Packings,304 ss Raschig rings,volume,m³,,,0,8000,1,,1,0.5,0.6,0.3,0.2,0.3,0.2,0.1,3.2,0.4,0.25,0.1,1.07
+material factors,fluid,Packings,Ceramic Intalox saddles,volume,m³,,,0,2000,1,,1,0.5,0.6,0.3,0.2,0.3,0.2,0.1,3.2,0.4,0.25,0.1,1.07
+material factors,fluid,Packings,304 ss pall rings,volume,m³,,,0,8500,1,,1,0.5,0.6,0.3,0.2,0.3,0.2,0.1,3.2,0.4,0.25,0.1,1.07
+material factors,fluid,Packings,PVC structured packing,volume,m³,,,0,5500,1,,1,0.5,0.6,0.3,0.2,0.3,0.2,0.1,3.2,0.4,0.25,0.1,1.07
+material factors,fluid,Packings,304 ss structured packing,volume,m³,,,0,7600,1,,1,0.5,0.6,0.3,0.2,0.3,0.2,0.1,3.2,0.4,0.25,0.1,1.07
+material factors,fluid,Pressure Vessels,"Vertical, cs ",shell mass,kg,160,250000,11600,34,0.85,,1,0.5,0.6,0.3,0.2,0.3,0.2,0.1,3.2,0.4,0.25,0.1,1.07
+material factors,fluid,Pressure Vessels,"Horizontal, cs ",shell mass,kg,160,250000,10200,31,0.85,,1,0.5,0.6,0.3,0.2,0.3,0.2,0.1,3.2,0.4,0.25,0.1,1.07
+material factors,fluid,Pressure Vessels,"Vertical, 304 ss ",shell mass,kg,120,250000,17400,79,0.85,,1,0.5,0.6,0.3,0.2,0.3,0.2,0.1,3.2,0.4,0.25,0.1,1.07
+material factors,fluid,Pressure Vessels,"Horizontal, 304 ss ",shell mass,kg,120,50000,12800,73,0.85,,1,0.5,0.6,0.3,0.2,0.3,0.2,0.1,3.2,0.4,0.25,0.1,1.07
+material factors,fluid,Pumps and Drivers,Single-stage centrifugal ,flow ,liters/s,0.2,126,8000,240,0.9,,1,0.5,0.6,0.3,0.2,0.3,0.2,0.1,3.2,0.4,0.25,0.1,1.07
+material factors,fluid,Pumps and Drivers,Explosion proof motor ,power,kW,1,2500,-1100,2100,0.6,,1,0.5,0.6,0.3,0.2,0.3,0.2,0.1,3.2,0.4,0.25,0.1,1.07
+material factors,fluid,Pumps and Drivers,Condensing steam turbine,power,kW,100,20000,-14000,1900,0.75,,1,0.5,0.6,0.3,0.2,0.3,0.2,0.1,3.2,0.4,0.25,0.1,1.07
+material factors,fluid,Reactors,"Jacketed, agitated",volume,m³,0.5,100,61500,32500,0.8,,1,0.5,0.6,0.3,0.2,0.3,0.2,0.1,3.2,0.4,0.25,0.1,1.07
+material factors,fluid,Reactors,"Jacketed, agitated, glass lined",volume,m³,0.5,25,12800,88200,0.4,,1,0.5,0.6,0.3,0.2,0.3,0.2,0.1,3.2,0.4,0.25,0.1,1.07
+material factors,fluid,Tanks,Floating roof,capacity,m³,100,10000,113000,3250,0.65,,1,0.5,0.6,0.3,0.2,0.3,0.2,0.1,3.2,0.4,0.25,0.1,1.07
+material factors,fluid,Tanks,Cone roof,capacity,m³,10,4000,5800,1600,0.7,,1,0.5,0.6,0.3,0.2,0.3,0.2,0.1,3.2,0.4,0.25,0.1,1.07
+material factors,fluid,Trays,Sieve trays,diameter,m,0.5,5,130,440,1.8,,1,0.5,0.6,0.3,0.2,0.3,0.2,0.1,3.2,0.4,0.25,0.1,1.07
+material factors,fluid,Trays,Valve trays,diameter,m,0.5,5,210,400,1.9,,1,0.5,0.6,0.3,0.2,0.3,0.2,0.1,3.2,0.4,0.25,0.1,1.07
+material factors,fluid,Trays,Bubble cap trays,diameter,m,0.5,5,340,640,1.9,,1,0.5,0.6,0.3,0.2,0.3,0.2,0.1,3.2,0.4,0.25,0.1,1.07
+material factors,fluid,Utilities,Cooling tower and pumps,flow ,liters/s,100,10000,170000,1500,0.9,,1,0.5,0.6,0.3,0.2,0.3,0.2,0.1,3.2,0.4,0.25,0.1,1.07
+material factors,fluid,Utilities,Packaged mechanical refrigerator ,evaporator duty,kW,50,1500,24000,3500,0.9,,1,0.5,0.6,0.3,0.2,0.3,0.2,0.1,3.2,0.4,0.25,0.1,1.07
+material factors,fluid,Utilities,Water ion exchange plant,flow ,m³/h,1,50,14000,6200,0.75,,1,0.5,0.6,0.3,0.2,0.3,0.2,0.1,3.2,0.4,0.25,0.1,1.07
+material factors,mixed,Agitators and Mixers,Propeller ,driver power,kW,5,75,17000,1130,1.05,,1,0.3,0.8,0.3,0.2,0.3,0.2,0.1,3.3,0.3,0.3,0.1,1.07
+material factors,mixed,Agitators and Mixers,Spiral ribbon mixer,driver power,kW,5,35,30800,125,2,,1,0.3,0.8,0.3,0.2,0.3,0.2,0.1,3.3,0.3,0.3,0.1,1.07
+material factors,mixed,Agitators and Mixers,Static mixer,flowrate,liters/s,1,50,570,1170,0.4,,1,0.3,0.8,0.3,0.2,0.3,0.2,0.1,3.3,0.3,0.3,0.1,1.07
+material factors,mixed,Boilers,"Packaged, 15 to 40 bar",steam mass flowrate,kg/h ,5000,200000,124000,10,1,,1,0.3,0.8,0.3,0.2,0.3,0.2,0.1,3.3,0.3,0.3,0.1,1.07
+material factors,mixed,Boilers,"Field erected, 10 to 70 bar",steam mass flowrate,kg/h ,20000,800000,130000,53,0.9,,1,0.3,0.8,0.3,0.2,0.3,0.2,0.1,3.3,0.3,0.3,0.1,1.07
+material factors,mixed,Centrifuges,High-speed disk,diameter,m,0.26,0.49,57000,480000,0.7,,1,0.3,0.8,0.3,0.2,0.3,0.2,0.1,3.3,0.3,0.3,0.1,1.07
+material factors,mixed,Centrifuges,Atmospheric suspended basket,power,kW,2,20,65000,750,1.5,,1,0.3,0.8,0.3,0.2,0.3,0.2,0.1,3.3,0.3,0.3,0.1,1.07
+material factors,mixed,Compressors,Blower,flowrate,m³/h,200,5000,4450,57,0.8,,1,0.3,0.8,0.3,0.2,0.3,0.2,0.1,3.3,0.3,0.3,0.1,1.07
+material factors,mixed,Compressors,Centrifugal,driver power,kW,75,30000,580000,20000,0.6,,1,0.3,0.8,0.3,0.2,0.3,0.2,0.1,3.3,0.3,0.3,0.1,1.07
+material factors,mixed,Compressors,Reciprocating,driver power,kW,93,16800,260000,2700,0.75,,1,0.3,0.8,0.3,0.2,0.3,0.2,0.1,3.3,0.3,0.3,0.1,1.07
+material factors,mixed,Conveyors,"Belt, 0.5 m wide",length,m,10,500,41000,730,1,,1,0.3,0.8,0.3,0.2,0.3,0.2,0.1,3.3,0.3,0.3,0.1,1.07
+material factors,mixed,Conveyors,"Belt, 1.0 m wide",length,m,10,500,46000,1320,1,,1,0.3,0.8,0.3,0.2,0.3,0.2,0.1,3.3,0.3,0.3,0.1,1.07
+material factors,mixed,Conveyors,"Bucket elevator, 0.5 m bucket",height,m,10,30,17000,2600,1,,1,0.3,0.8,0.3,0.2,0.3,0.2,0.1,3.3,0.3,0.3,0.1,1.07
+material factors,mixed,Crushers,Reversible hammer mill,mass flowrate,t/h,30,400,68400,730,1,,1,0.3,0.8,0.3,0.2,0.3,0.2,0.1,3.3,0.3,0.3,0.1,1.07
+material factors,mixed,Crushers,Pulverizers,mass flowrate,kg/h,200,4000,16000,670,0.5,,1,0.3,0.8,0.3,0.2,0.3,0.2,0.1,3.3,0.3,0.3,0.1,1.07
+material factors,mixed,Crushers,Jaw crusher,mass flowrate,t/h,100,600,-8000,62000,0.5,,1,0.3,0.8,0.3,0.2,0.3,0.2,0.1,3.3,0.3,0.3,0.1,1.07
+material factors,mixed,Crushers,Gyratory crusher,mass flowrate,t/h,200,3000,5000,5100,0.7,,1,0.3,0.8,0.3,0.2,0.3,0.2,0.1,3.3,0.3,0.3,0.1,1.07
+material factors,mixed,Crushers,Ball mill,mass flowrate,t/h,0.7,60,-23000,242000,0.4,,1,0.3,0.8,0.3,0.2,0.3,0.2,0.1,3.3,0.3,0.3,0.1,1.07
+material factors,mixed,Crystallizers,Scraped surface crystallizer,length,m,7,280,10000,13200,0.8,,1,0.3,0.8,0.3,0.2,0.3,0.2,0.1,3.3,0.3,0.3,0.1,1.07
+material factors,mixed,Dryers,Direct contact rotary,area,m²,11,180,15000,10500,0.9,,1,0.3,0.8,0.3,0.2,0.3,0.2,0.1,3.3,0.3,0.3,0.1,1.07
+material factors,mixed,Dryers,Atmospheric tray batch,area,m²,3,20,10000,7900,0.5,,1,0.3,0.8,0.3,0.2,0.3,0.2,0.1,3.3,0.3,0.3,0.1,1.07
+material factors,mixed,Dryers,Spray dryer,evap rate,kg/h,400,4000,410000,2200,0.7,,1,0.3,0.8,0.3,0.2,0.3,0.2,0.1,3.3,0.3,0.3,0.1,1.07
+material factors,mixed,Evaporators,Vertical tube,area,m²,11,640,330,36000,0.55,,1,0.3,0.8,0.3,0.2,0.3,0.2,0.1,3.3,0.3,0.3,0.1,1.07
+material factors,mixed,Evaporators,Agitated Falling film,area,m²,0.5,12,88000,65500,0.75,,1,0.3,0.8,0.3,0.2,0.3,0.2,0.1,3.3,0.3,0.3,0.1,1.07
+material factors,mixed,Exchangers,U-tube shell and tube,area,m²,10,1000,28000,54,1.2,,1,0.3,0.8,0.3,0.2,0.3,0.2,0.1,3.3,0.3,0.3,0.1,1.07
+material factors,mixed,Exchangers,Floating head shell and tube,area,m²,10,1000,32000,70,1.2,,1,0.3,0.8,0.3,0.2,0.3,0.2,0.1,3.3,0.3,0.3,0.1,1.07
+material factors,mixed,Exchangers,Double pipe,area,m²,1,80,1900,2500,1,,1,0.3,0.8,0.3,0.2,0.3,0.2,0.1,3.3,0.3,0.3,0.1,1.07
+material factors,mixed,Exchangers,Thermosiphon reboiler,area,m²,10,500,30400,122,1.1,,1,0.3,0.8,0.3,0.2,0.3,0.2,0.1,3.3,0.3,0.3,0.1,1.07
+material factors,mixed,Exchangers,U-tube Kettle reboiler,area,m²,10,500,29000,400,0.9,,1,0.3,0.8,0.3,0.2,0.3,0.2,0.1,3.3,0.3,0.3,0.1,1.07
+material factors,mixed,Exchangers,Plate and frame,area,m²,1,500,1600,210,0.95,,1,0.3,0.8,0.3,0.2,0.3,0.2,0.1,3.3,0.3,0.3,0.1,1.07
+material factors,mixed,Filters,Plate and frame,capacity,m³,0.4,1.4,128000,89000,0.5,,1,0.3,0.8,0.3,0.2,0.3,0.2,0.1,3.3,0.3,0.3,0.1,1.07
+material factors,mixed,Filters,Vacuum drum,area,m²,10,180,-73000,93000,0.3,,1,0.3,0.8,0.3,0.2,0.3,0.2,0.1,3.3,0.3,0.3,0.1,1.07
+material factors,mixed,Furnaces,Cylindrical,duty,MW,0.2,60,80000,109000,0.8,,1,0.3,0.8,0.3,0.2,0.3,0.2,0.1,3.3,0.3,0.3,0.1,1.07
+material factors,mixed,Furnaces,Box,duty,MW,30,120,43000,111000,0.8,,1,0.3,0.8,0.3,0.2,0.3,0.2,0.1,3.3,0.3,0.3,0.1,1.07
+material factors,mixed,Packings,304 ss Raschig rings,volume,m³,,,0,8000,1,,1,0.3,0.8,0.3,0.2,0.3,0.2,0.1,3.3,0.3,0.3,0.1,1.07
+material factors,mixed,Packings,Ceramic Intalox saddles,volume,m³,,,0,2000,1,,1,0.3,0.8,0.3,0.2,0.3,0.2,0.1,3.3,0.3,0.3,0.1,1.07
+material factors,mixed,Packings,304 ss pall rings,volume,m³,,,0,8500,1,,1,0.3,0.8,0.3,0.2,0.3,0.2,0.1,3.3,0.3,0.3,0.1,1.07
+material factors,mixed,Packings,PVC structured packing,volume,m³,,,0,5500,1,,1,0.3,0.8,0.3,0.2,0.3,0.2,0.1,3.3,0.3,0.3,0.1,1.07
+material factors,mixed,Packings,304 ss structured packing,volume,m³,,,0,7600,1,,1,0.3,0.8,0.3,0.2,0.3,0.2,0.1,3.3,0.3,0.3,0.1,1.07
+material factors,mixed,Pressure Vessels,"Vertical, cs ",shell mass,kg,160,250000,11600,34,0.85,,1,0.3,0.8,0.3,0.2,0.3,0.2,0.1,3.3,0.3,0.3,0.1,1.07
+material factors,mixed,Pressure Vessels,"Horizontal, cs ",shell mass,kg,160,250000,10200,31,0.85,,1,0.3,0.8,0.3,0.2,0.3,0.2,0.1,3.3,0.3,0.3,0.1,1.07
+material factors,mixed,Pressure Vessels,"Vertical, 304 ss ",shell mass,kg,120,250000,17400,79,0.85,,1,0.3,0.8,0.3,0.2,0.3,0.2,0.1,3.3,0.3,0.3,0.1,1.07
+material factors,mixed,Pressure Vessels,"Horizontal, 304 ss ",shell mass,kg,120,50000,12800,73,0.85,,1,0.3,0.8,0.3,0.2,0.3,0.2,0.1,3.3,0.3,0.3,0.1,1.07
+material factors,mixed,Pumps and Drivers,Single-stage centrifugal ,flow ,liters/s,0.2,126,8000,240,0.9,,1,0.3,0.8,0.3,0.2,0.3,0.2,0.1,3.3,0.3,0.3,0.1,1.07
+material factors,mixed,Pumps and Drivers,Explosion proof motor ,power,kW,1,2500,-1100,2100,0.6,,1,0.3,0.8,0.3,0.2,0.3,0.2,0.1,3.3,0.3,0.3,0.1,1.07
+material factors,mixed,Pumps and Drivers,Condensing steam turbine,power,kW,100,20000,-14000,1900,0.75,,1,0.3,0.8,0.3,0.2,0.3,0.2,0.1,3.3,0.3,0.3,0.1,1.07
+material factors,mixed,Reactors,"Jacketed, agitated",volume,m³,0.5,100,61500,32500,0.8,,1,0.3,0.8,0.3,0.2,0.3,0.2,0.1,3.3,0.3,0.3,0.1,1.07
+material factors,mixed,Reactors,"Jacketed, agitated, glass lined",volume,m³,0.5,25,12800,88200,0.4,,1,0.3,0.8,0.3,0.2,0.3,0.2,0.1,3.3,0.3,0.3,0.1,1.07
+material factors,mixed,Tanks,Floating roof,capacity,m³,100,10000,113000,3250,0.65,,1,0.3,0.8,0.3,0.2,0.3,0.2,0.1,3.3,0.3,0.3,0.1,1.07
+material factors,mixed,Tanks,Cone roof,capacity,m³,10,4000,5800,1600,0.7,,1,0.3,0.8,0.3,0.2,0.3,0.2,0.1,3.3,0.3,0.3,0.1,1.07
+material factors,mixed,Trays,Sieve trays,diameter,m,0.5,5,130,440,1.8,,1,0.3,0.8,0.3,0.2,0.3,0.2,0.1,3.3,0.3,0.3,0.1,1.07
+material factors,mixed,Trays,Valve trays,diameter,m,0.5,5,210,400,1.9,,1,0.3,0.8,0.3,0.2,0.3,0.2,0.1,3.3,0.3,0.3,0.1,1.07
+material factors,mixed,Trays,Bubble cap trays,diameter,m,0.5,5,340,640,1.9,,1,0.3,0.8,0.3,0.2,0.3,0.2,0.1,3.3,0.3,0.3,0.1,1.07
+material factors,mixed,Utilities,Cooling tower and pumps,flow ,liters/s,100,10000,170000,1500,0.9,,1,0.3,0.8,0.3,0.2,0.3,0.2,0.1,3.3,0.3,0.3,0.1,1.07
+material factors,mixed,Utilities,Packaged mechanical refrigerator ,evaporator duty,kW,50,1500,24000,3500,0.9,,1,0.3,0.8,0.3,0.2,0.3,0.2,0.1,3.3,0.3,0.3,0.1,1.07
+material factors,mixed,Utilities,Water ion exchange plant,flow ,m³/h,1,50,14000,6200,0.75,,1,0.3,0.8,0.3,0.2,0.3,0.2,0.1,3.3,0.3,0.3,0.1,1.07
 Hand,any,Agitators and Mixers,Propeller ,driver power,kW,5,75,17000,1130,1.05,3,,,,,,,,,,,,,1.07
 Hand,any,Agitators and Mixers,Spiral ribbon mixer,driver power,kW,5,35,30800,125,2,3,,,,,,,,,,,,,1.07
 Hand,any,Agitators and Mixers,Static mixer,flowrate,liters/s,1,50,570,1170,0.4,3,,,,,,,,,,,,,1.07

@@ -1,32 +1,31 @@
-import sys
 import os
-import pandas as pd
-import dash
-from dash import Dash, html, Input, Output, State, dcc
-from dash.exceptions import PreventUpdate
-from dash_ag_grid.AgGrid import AgGrid
 import traceback
-from collections import namedtuple
+from typing import Final
+
+import dash
 import numpy as np
+import pandas as pd
 from agility.components import (
     ButtonCustom,
+    DisplayField,
     DropdownCustom,
     InputCustom,
     MessageCustom,
-    DisplayField,
 )
+from dash import Dash, Input, Output, State, html
+from dash.exceptions import PreventUpdate
 
-from budge.config.main import STORE_ID, PROJECT_NAME, DATA_STORE
+from budge.config.main import DATA_STORE, STORE_ID
+from budge.core.definitions import Factors
 from budge.project import estimation
-
 
 dash.register_page(__name__)
 app: Dash = dash.get_app()
 
-from typing import Final
-
 
 class PageIDs:
+    """Class PageIDs"""
+
     def __init__(self):
         # Get the base name of the file where this instance is created
         filename = os.path.basename(__file__)
@@ -72,12 +71,25 @@ layout = html.Div(
         ),
         html.Hr(),
         html.Div(id=ids.status),
-        html.Div(id=ids.input, className="px-6 pb-2 w-100"),
+        html.Div(id=ids.input, className="px-6 pb-2 w-96"),
         html.Div(id=ids.save_container, className="px-6 pb-2 w-96"),
         html.Div(id=ids.feedback_save, className="px-6 pb-2 w-96"),
         html.Div(id=ids.run_container, className="px-6 pb-2 w-96"),
         html.Div(id=ids.feedback_run, className="px-6 pb-2 w-96"),
-        html.Div(id=ids.output, className="px-6 pb-2 w-60"),
+        # html.Div(id=ids.output, className="px-6 pb-2 w-60"),
+        html.Div(
+            id=ids.output,
+            className="px-6 pb-5 w-96 rounded shadow-lg",
+            style={
+                "backgroundColor": "#f8f9fa",
+                "border": "1px solid #dee2e6",
+                "paddingTop": "10px",  # Additional padding at the top if needed
+                "margin": "10px 0",  # Margin on top and bottom
+                "minHeight": "200px",  # Set a minimum height
+                "boxSizing": "border-box",  # Ensures padding is included in total width/height
+                "textAlign": "left",  # Center-align content within the Div
+            },
+        ),
     ],
     className="w-full",
 )
@@ -89,6 +101,7 @@ layout = html.Div(
     Input(STORE_ID, "data"),
 )
 def load_status(data):
+    """loading the data"""
     if data is None:
         return MessageCustom(
             messages="Project not loaded. Go to start page and create new or open existing project.",
@@ -104,6 +117,7 @@ def load_status(data):
     State(DATA_STORE, "data"),
 )
 def display_input(data, material_data):
+    """displaying input"""
 
     if data is None:
         raise PreventUpdate
@@ -112,38 +126,53 @@ def display_input(data, material_data):
     estimation_input, errors = estimation.validate_input(estimation_input)
     df = pd.DataFrame(material_data)
 
+    method_options = [
+        {"label": method, "value": method} for method in df[Factors.METHOD].unique()
+    ]
+
+    plant_options = [
+        {"label": plant, "value": plant} for plant in df[Factors.PLANT_TYPE].unique()
+    ]
+
+    equipment_options = [
+        {"label": equipment, "value": equipment}
+        for equipment in df[Factors.EQUIPMENT].unique()
+    ]
+
+    equipment_type_options = [
+        {"label": equipment_type, "value": equipment_type}
+        for equipment_type in df[Factors.EQUIPMENT_TYPE].unique()
+    ]
+
     input_fields = html.Div(
         [
             html.H1("Input", className="dash-h1"),
             DropdownCustom(
                 id=ids.method_dropdown,
                 label="Select Method",
-                value=estimation_input.get("method", "Select a costing method"),
-                options=[
-                    {"label": method, "value": method}
-                    for method in df["method"].unique()
-                ],
+                value=estimation_input.get("method", ""),
+                options=method_options,
                 error_message=errors.get("method", ""),
             ).layout,
             DropdownCustom(
                 id=ids.plant_dropdown,
                 label="Select Plant Type",
-                value=estimation_input.get("plant", ""),
-                options=[],
-                error_message=errors.get("plant", ""),
+                value=estimation_input.get("plant_type", ""),
+                options=plant_options,
+                error_message=errors.get("plant_type", ""),
             ).layout,
             DropdownCustom(
                 id=ids.equipment_dropdown,
                 label="Select Equipment",
                 value=estimation_input.get("equipment", ""),
-                options=[],
+                options=equipment_options,
                 error_message=errors.get("equipment", ""),
             ).layout,
             DropdownCustom(
                 id=ids.equipment_type_dropdown,
                 label="Select specific equipment type:",
                 value=estimation_input.get("equipment_type", ""),
-                options=[],
+                options=equipment_type_options,
                 error_message=errors.get("equipment_type", ""),
             ).layout,
             InputCustom(
@@ -152,6 +181,7 @@ def display_input(data, material_data):
                 label="Sizing Quantity",
                 value=estimation_input.get("sizing_value", 0),
                 error_message=errors.get("sizing_value", ""),
+                help_text="Enter sizing value",
             ).layout,
         ]
     )
@@ -169,12 +199,17 @@ def display_input(data, material_data):
 @app.callback(
     Output(ids.plant_dropdown, "options"),
     Input(ids.method_dropdown, "value"),
+    State(STORE_ID, "data"),
     State(DATA_STORE, "data"),
 )
-def update_plant_options(method_choice, material_data):
+def update_plant_options(method_choice, data, material_data):
     if method_choice:
         df = pd.DataFrame(material_data)
-        plant_types = df[df["method"] == method_choice]["plant_type"].dropna().unique()
+        plant_types = (
+            df[df[Factors.METHOD] == method_choice][Factors.PLANT_TYPE]
+            .dropna()
+            .unique()
+        )
         return [{"label": plant, "value": plant} for plant in plant_types]
     return []
 
@@ -188,7 +223,9 @@ def update_equipment_options(plant_choice, material_data):
     if plant_choice:
         df = pd.DataFrame(material_data)
         equipment_types = (
-            df[df["plant_type"] == plant_choice]["equipment"].dropna().unique()
+            df[df[Factors.PLANT_TYPE] == plant_choice][Factors.EQUIPMENT]
+            .dropna()
+            .unique()
         )
         return [
             {"label": equipment, "value": equipment} for equipment in equipment_types
@@ -202,24 +239,21 @@ def update_equipment_options(plant_choice, material_data):
         Input(ids.method_dropdown, "value"),
         Input(ids.plant_dropdown, "value"),
         Input(ids.equipment_dropdown, "value"),
+        Input(STORE_ID, "data"),
     ],
     State(DATA_STORE, "data"),
 )
 def update_equipment_type_options(
-    method_choice, plant_choice, equipment_choice, material_data
+    method_choice, plant_choice, equipment_choice, _, material_data
 ):
     if method_choice and plant_choice and equipment_choice:
         specific_types = (
             estimation.filter_material_data(
                 material_data, method_choice, plant_choice, equipment_choice
-            )["equipment_type"]
+            )[Factors.EQUIPMENT_TYPE]
             .dropna()
             .unique()
         )
-
-        # specific_types = df[(df['method'] == method_choice) &
-        #                     (df['plant_type'] == plant_choice) &
-        #                     (df['equipment'] == equipment_choice)]['equipment_type'].dropna().unique()
         return [
             {"label": equipment_type, "value": equipment_type}
             for equipment_type in specific_types
@@ -229,7 +263,7 @@ def update_equipment_type_options(
 
 # Update Sizing Label and Input Placeholder based on selected specific equipment type
 @app.callback(
-    Output(ids.sizing_quantity_input, "placeholder"),
+    Output(f"{ids.sizing_quantity_input}-hel", "value"),
     [
         Input(ids.method_dropdown, "value"),
         Input(ids.plant_dropdown, "value"),
@@ -247,10 +281,10 @@ def update_sizing_label(
         )
         selected_row = selected_row.iloc[0]
 
-        sizing_quantity = selected_row["sizing_quantity"]
-        units = selected_row["units"]
-        s_lower = selected_row["s_lower"]
-        s_upper = selected_row["s_upper"]
+        sizing_quantity = selected_row[Factors.SIZING_QUANTITY]
+        units = selected_row[Factors.UNITS]
+        s_lower = selected_row[Factors.S_LOWER]
+        s_upper = selected_row[Factors.S_UPPER]
 
         if np.isnan(s_lower) or np.isnan(s_upper):
             placeholder = f"Enter {sizing_quantity} in {units}"
@@ -259,7 +293,7 @@ def update_sizing_label(
                 f"Enter {sizing_quantity} in {units} between {s_lower} and {s_upper}"
             )
         return placeholder
-    return "Enter sizing value"
+    return "Enter sizing value11"
 
 
 # Callback to save data
@@ -284,14 +318,12 @@ def save_data(n_clicks, method, plant, equipment, equipment_type, sizing_value, 
         raise PreventUpdate
     estimation_input = {
         "method": method,
-        "plant": plant,
+        "plant_type": plant,
         "equipment": equipment,
         "equipment_type": equipment_type,
         "sizing_value": sizing_value,
     }
     data["estimation_input"] = estimation_input
-
-    print(data)
 
     data = estimation.save_reset(data)
     return (
@@ -342,7 +374,7 @@ def run_calculation(n_clicks, data, material_data):
     if is_ready:
         try:
             data = estimation.run_calculation(data, material_data)
-            data = estimation.run_reset(data)
+            # data = estimation.run_reset(data)
             msg = "Calculation successful"
             feedback_html = MessageCustom(messages=msg, success=True).layout
             return data, feedback_html, None
@@ -367,11 +399,11 @@ def run_calculation(n_clicks, data, material_data):
 def display_output(data):
     if not data:
         return None
-    page3_output = data.get("page3_output", None)
+    estimation_output = data.get("estimation_output", None)
 
-    if page3_output is None:
+    if estimation_output is None:
         return None
-    page3_output = data.get("page3_output", {})
+    estimation_output = data.get("estimation_output", {})
 
     return html.Div(
         [
@@ -382,12 +414,12 @@ def display_output(data):
             DisplayField(
                 id=ids.purchased_equipment_cost_output,
                 label="Purchased Equipment Cost",
-                value=page3_output["purchased_cost_output"],
+                value=estimation_output["purchased_cost_output"],
             ).layout,
             DisplayField(
                 id=ids.total_cost_output,
-                label="Total Fixed Capital Cost",
-                value=page3_output["total_cost_output"],
+                label="ISBL cost",
+                value=estimation_output["total_cost_output"],
             ).layout,
         ]
     )
